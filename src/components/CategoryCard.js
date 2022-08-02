@@ -6,7 +6,6 @@ import { BsArrowRightShort } from 'react-icons/bs';
 import { Link } from 'react-router-dom'
 
 const CategoryCard = () => {
-    console.log(data.all_categories);
   return (
     <CategoryContainer>
     <div className='category_name'>
@@ -29,13 +28,12 @@ const CategoryCard = () => {
 }
 
 const CategoryContainer = styled.div`
-    padding: 48px 24px 64px;
 
     .category_name {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 0 50px 50px 50px;
+        margin-bottom: 50px;
 
         h2 {
             font-size: var(--headlineSmall);

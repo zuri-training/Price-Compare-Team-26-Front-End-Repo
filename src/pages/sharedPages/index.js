@@ -12,6 +12,7 @@ import Privacy from "./PrivacyPolicyPage";
 import Profile from "./ProfilePage";
 import Rules from "./RulesPage";
 import SharedLayout from "./SharedLayout";
+import SignUp from "./SignUpPage";
 import Trending from "./TrendingPage";
 
 
@@ -27,6 +28,7 @@ export {
     Logout,
     Rules,
     SharedLayout,
+    SignUp,
     Home,
     ComparePrice,
     Privacy,

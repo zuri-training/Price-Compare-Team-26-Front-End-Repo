@@ -8,26 +8,25 @@ import circle from '../assets/images/plain header.png';
 
 const HeroSection = () => {
   return (
-    <HeroContainer>
-    <div className='hero'>
-        <div className='hero_text'>
-        <h1>All Product Prices in One Place</h1>
-        <p><MdOutlineCheckCircle className='check_circle'/>Wide range prices</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Coupon price sourcing</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Quality description</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Discount Deals</p>
-        </div>
+    <HeroContainer className=''>
+      <div className='hero'>
+          <div className='hero_text'>
+          <h1>All Product Prices in One Place</h1>
+          <p><MdOutlineCheckCircle className='check_circle'/>Wide range prices</p>
+          <p><MdOutlineCheckCircle className='check_circle'/>Coupon price sourcing</p>
+          <p><MdOutlineCheckCircle className='check_circle'/>Quality description</p>
+          <p><MdOutlineCheckCircle className='check_circle'/>Discount Deals</p>
+          </div>
 
-        <Link to='/'>
-        <button type='button' className='btn hero_btn'>Get Started</button>
-        </Link>
-    </div>
+          <Link to='sign-up'>
+          <button type='button' className='btn hero_btn'>Get Started</button>
+          </Link>
+      </div>
 
-    <div>
-        <img src={heroimg} alt="hero" />
-        <img src={circle} alt="circle" className='circle' />
-        
-    </div>
+      <div>
+          <img src={heroimg} alt="hero" className='hero_img' />
+          <img src={circle} alt="circle" className='circle' />        
+      </div>
     </HeroContainer>
   )
 }
@@ -39,32 +38,36 @@ const HeroContainer = styled.section`
     justify-content: center;
     align-item: center;
     padding: 68px 65px 0 66px;
-    margin-top: 48px;  
+    margin-top: 48px;
+    margin-bottom: 48px; 
     
     .hero {
-      margin-top: 105px; 
-    
+      margin-top: 105px;     
 
-    .hero_text {
-      background: var(--clr-secondaryOrange);
-      padding: 30px 57px;
-      margin-bottom: 23px;
-      filter: drop-shadow(0 0 2rem var(--clr-secondaryOrange) );
-      height: 431px;
-      width: 400px;
+      .hero_text {
+        background: var(--clr-secondaryOrange);
+        padding: 30px 57px;
+        margin-bottom: 23px;
+        filter: drop-shadow(0 0 2rem var(--clr-secondaryOrange) );
+        height: 431px;
+        width: 400px;
 
-      p {
-        font-size: var(--body-Large);
-        color: var(--clr-text-black);
-        font-weight: 500;
-      }
+        p {
+          font-size: var(--body-Large);
+          color: var(--clr-text-black);
+          font-weight: 500;
+        }
 
-      .check_circle {
-        color: var(--clr-primaryOrange5);
-        margin-right: 17px;
+        .check_circle {
+          color: var(--clr-primaryOrange5);
+          margin-right: 17px;
+        }
       }
     }
-  }
+    .hero_img {
+      width: 650px;
+      height: 650px
+    }
     .hero_btn {
       width: 297px;
       height: 60px;

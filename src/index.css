@@ -122,7 +122,15 @@ li {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     margin-bottom: 48px;
-    gap: 40px;
+    gap: 30px 30px;
+}
+
+@media (max-width: 992px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .category_tile {
@@ -145,10 +153,11 @@ li {
 .text_container {
     padding: 10px 64px 150px 64px;
     text-align: justify;
-    color: var(--clr-grey6);
+    color: var(--clr-text-black);
 }
 
 .text_container h1 {
+    color: var(--clr-text-headline);
     font-size: var(--headlineLarge);
     font-weight: 700;
 }

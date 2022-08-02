@@ -11,7 +11,7 @@ const Footer = () => {
     window.scrollTo(0, 0)
   }
   return (
-    <FooterContainer>
+    <FooterContainer className=''>
       <div className='footer_details'>
         <div className="footer_info">
           <div className='about_us'>
@@ -78,6 +78,10 @@ const FooterContainer = styled.footer`
   background: var(--clr-grey6);
   color: var(--clr-background);
   padding: 24px 64px 35px 72px;
+
+  // @media (mix-width: 992px) {
+  //   flex-direction: column;
+  // }
 
   a {
     color: var(--clr-bcgWhite);
