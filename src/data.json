@@ -15,6 +15,36 @@
             "id": 3,
             "categoryImg": "./images/categoryImages/HomeOffice.png",
             "categoryName": "Home Office"
+        },
+        {
+            "id": 4,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
+        },
+        {
+            "id": 5,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
+        },
+        {
+            "id": 6,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
+        },
+        {
+            "id": 7,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
+        },
+        {
+            "id": 8,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
+        },
+        {
+            "id": 9,
+            "categoryImg": "./images/categoryImages/HomeOffice.png",
+            "categoryName": "Home Office"
         }
 
     ]

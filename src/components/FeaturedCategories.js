@@ -1,19 +1,12 @@
 import React from 'react'
-import styled from 'styled-components'
 import CategoryCard from './CategoryCard'
-
 
 const FeaturedCategories = () => {
   return (
-    <CategoryContainer>
+    <div>
       <CategoryCard/>
-      <CategoryCard/>
-      <CategoryCard/>
-    </CategoryContainer>
+    </div>
   )
 }
 
-const CategoryContainer = styled.section`
-  // padding: 48px 64px 163px;
-`
 export default FeaturedCategories

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { FiArrowUp } from 'react-icons/fi';
 import Newsletter from '../assets/images/newsletter.png'
-import SVLogo from '../assets/images/SVLogo.png'
+import SVLogoWhite from '../assets/images/SVLogoWhite.png'
 
 const Footer = () => {
   const footerYear = new Date().getFullYear()
@@ -11,7 +11,7 @@ const Footer = () => {
     window.scrollTo(0, 0)
   }
   return (
-    <FooterContainer className=''>
+    <FooterContainer>
       <div className='footer_details'>
         <div className="footer_info">
           <div className='about_us'>
@@ -49,23 +49,23 @@ const Footer = () => {
         <div className='newsletter'>
           <img src={Newsletter} alt="newsletter-logo" />
           <p>
-            Get updates on prices and shopping tips with PriceBeta Newsletter
+            Get updates on prices and shopping tips with Scout Vendor Newsletter
           </p>
           <input type="email" placeholder='Your email address' />
           <button type='click' className='btn'>Subscribe</button>
         </div>
-
       </div>
-      <hr />
+
+      <hr className='hr' />
       <div className='footer'>
         <div className='footer_content'>
           <Link to='/'>
-            <img src={SVLogo} alt='scout vendor' className='footer_logo' />
+            <img src={SVLogoWhite} alt='scout vendor' className='footer_logo' />
           </Link>
           <span>&copy; {footerYear} Nigeria</span> 
         </div>
       
-        <Link to='/' className='back_to_top'>Back to Top <FiArrowUp/></Link>
+        <span onClick={scrollToTop} className='back_to_top'>Back to Top <FiArrowUp/></span>
 
       </div>    
     </FooterContainer>
@@ -73,15 +73,15 @@ const Footer = () => {
 }
 
 const FooterContainer = styled.footer`
-  height: 600px;
-  display: flex;
+  display: block;
   background: var(--clr-grey6);
   color: var(--clr-background);
   padding: 24px 64px 35px 72px;
 
-  // @media (mix-width: 992px) {
-  //   flex-direction: column;
-  // }
+  @media (max-width: 992px) {
+    flex-direction: column;
+    padding: 12px 32px 0 12px;
+  }
 
   a {
     color: var(--clr-bcgWhite);
@@ -91,6 +91,10 @@ const FooterContainer = styled.footer`
     display: flex;
     align-items: center;
 
+    @media (max-width: 992px) {
+      display: block;
+    }
+
     ul {
       line-height: 35px;
     }
@@ -99,15 +103,22 @@ const FooterContainer = styled.footer`
       display: flex;
       align-items: center;
       align-self: baseline;
-      height: 340px;
 
-      h2 {
-        font-size: 32px;
+      @media (max-width: 992px){
+        flex-direction: column;
       }
       
       .about_us, .info, .catalogue {
         align-self: normal;
         margin-right: 40px;
+
+        h2 {
+          font-size: var(--headlineSmall);
+        }
+
+        @media (max-width: 992px){
+          margin: 0;
+        }
       } 
     }
     
@@ -120,7 +131,10 @@ const FooterContainer = styled.footer`
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      margin-left: 130px;
+
+      @media (max-width: 992px) {
+        margin: 0;
+      }
 
       p {
         font-size: 24px;
@@ -131,6 +145,9 @@ const FooterContainer = styled.footer`
       input, button {
         height: 60px;
         width: -webkit-fill-available;
+        border-radius: var(--borderRadius);
+        border-style: none;
+        border: 1.2px solid #BCBBBA;
       }
 
       button {
@@ -141,42 +158,83 @@ const FooterContainer = styled.footer`
     }
   }
 
-  hr {
+  .hr {
     border: 1px solid var(--clr-grey5);
     margin: 70px 0;
+    @media (max-width: 992px) {
+      margin: 0 0 20px 0;
+    }
   }
 
   .footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: var(--clr-grey3);
 
     .footer_content {
       display: flex;
-    justify-content: center;
-    align-items: center;
+      justify-content: center;
+      align-items: center;
 
-    .footer_logo {
-      width: 100px;
-      margin-right: 30px;
+      .footer_logo {
+        width: 100px;
+        margin-right: 30px;
+      }
     }
+
+    .back_to_top {
+      color: var(--secondaryOrange);
+      font-size: var(--bodySmall);
     }
   }
+  
 
+  @media (max-width: 428px) {
+    display: block;
+    padding: 50px 0 0 0;
 
-  .back_to_top {
-    // position: a;
-    // right: 30px;
-    // position: fixed;
-    // right: 1.875rem;
-    // font-size: 24px;
-    // font-weight: 600;
-    color: var(--clr-grey3);
-  }
+    .footer_details {
+      display: block;
 
-  @media (min-width: 776px) {
-    flex-direction: column;
+      ul {
+        line-height: 24px;
+      }
+
+      .footer_info {
+        display: block;
+        padding-left: 40px;
+
+        .about_us, .info, .catalogue {
+          align-self: normal;
+  
+          h2 {
+            font-size: var(--headlineSmall);
+          }
+
+          ul li {
+            font-size: var(--bodyLarge);
+          }
+  
+        }
+      }
+
+      .newsletter {
+        margin: 72px 24px;
+        width: 330px;
+        border: 2px solid #F6C598;
+
+        p {
+          font-size: var(--titleSmall);
+        }
+      }
+
+    }
+
+    .footer {
+      margin-bottom: 20px;
+      padding: 0 12px 22px 12px;
+    }
+  
   }
   
 `

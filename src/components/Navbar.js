@@ -37,6 +37,9 @@ const NavContainer = styled.nav`
   padding: 10px 64px;
   border-radius: var(--borderRadius);
 
+  @media (max-width: 428px) {
+    padding: 0;
+  }
 
   .menu_logo {
     display: flex;
@@ -56,7 +59,24 @@ const NavContainer = styled.nav`
     }
     
   }
+  @media (max-width: 428px) {
 
+    .menu_logo {
+      margin-top: 10px;
+
+      .toggle_btn {
+        font-size: 45px;
+        margin-right: 14px;
+      }
+
+      .svlogo {
+        width: 190px;
+      }
+    }
+    img {
+      width: 50px;
+    }
+  }
   // @media (min-width: 992px) {
   //   position: sticky;
   //   top: 0;

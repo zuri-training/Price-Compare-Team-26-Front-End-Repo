@@ -42,7 +42,7 @@ const SidebarContainer = styled.aside`
         align-items: center;
         z-index: -1;
         opacity: 0;
-        // transition: var(--transition);
+        transition: var(--transition);
     } 
     
     .show-sidebar {
@@ -82,25 +82,12 @@ const SidebarContainer = styled.aside`
     color: var(--clr-text-black);
     padding: 1rem 0;
     text-transform: capitalize;
-    // transition: var(--transition);
+    transition: var(--transition);
     }
     .nav-link:hover {
     color: var(--clr-primaryOrange5);
     }
-    .nav-link:hover .icon {
-    color: var(--primary-500);
-    }
-    .icon {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    display: grid;
-    place-items: center;
-    // transition: var(--transition);
-    }
     .active {
-    color: var(--clr-primaryOrange5);
-    }
-    .active .icon {
     color: var(--clr-primaryOrange5);
     }
 
