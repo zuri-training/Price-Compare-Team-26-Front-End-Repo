@@ -93,9 +93,9 @@ const HeroContainer = styled.section`
 
         .hero_text {
           margin: 0;
-          width: 225px;
+          width: 200px;
           height: 271px;
-          padding: 17px 0 32px 26px;
+          padding: 17px 0 0 15px;
 
           h1 {
             font-size: var(--titleSmall);
@@ -115,6 +115,7 @@ const HeroContainer = styled.section`
 
       .hero_img {
         align-self: center;
+        margin-top: 20px;
         width: 200px;
         height: 230px;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
