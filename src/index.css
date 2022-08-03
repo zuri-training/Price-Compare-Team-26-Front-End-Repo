@@ -163,7 +163,7 @@ li {
 }
 
 .text_container p {
-    font-size: var(--titleLarge);
+    font-size: var(--bodyLarge);
 }
 
 .text_container h3 {
@@ -178,6 +178,7 @@ li {
     line-height: var(--lineHeight);
     list-style-type: disc;
     line-height: 35px;
+    font-size: var(--bodyLarge);
 }
 
 .text_container ol li {

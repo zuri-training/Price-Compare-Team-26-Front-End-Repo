@@ -10,17 +10,17 @@ const HeroSection = () => {
   return (
     <HeroContainer className=''>
       <div className='hero'>
-          <div className='hero_text'>
-          <h1>All Product Prices in One Place</h1>
-          <p><MdOutlineCheckCircle className='check_circle'/>Wide range prices</p>
-          <p><MdOutlineCheckCircle className='check_circle'/>Coupon price sourcing</p>
-          <p><MdOutlineCheckCircle className='check_circle'/>Quality description</p>
-          <p><MdOutlineCheckCircle className='check_circle'/>Discount Deals</p>
-          </div>
+        <div className='hero_text'>
+        <h1>All Product Prices in One Place</h1>
+        <p><MdOutlineCheckCircle className='check_circle'/>Wide range prices</p>
+        <p><MdOutlineCheckCircle className='check_circle'/>Coupon price sourcing</p>
+        <p><MdOutlineCheckCircle className='check_circle'/>Quality description</p>
+        <p><MdOutlineCheckCircle className='check_circle'/>Discount Deals</p>
+        </div>
 
-          <Link to='sign-up'>
-          <button type='button' className='btn hero_btn'>Get Started</button>
-          </Link>
+        <Link to='sign-up'>
+        <button type='button' className='btn hero_btn'>Get Started</button>
+        </Link>
       </div>
 
       <div>
@@ -66,7 +66,7 @@ const HeroContainer = styled.section`
     }
     .hero_img {
       width: 650px;
-      height: 650px
+      height: 650px;
     }
     .hero_btn {
       width: 297px;
@@ -80,6 +80,42 @@ const HeroContainer = styled.section`
       // left: 800px;
       margin: 30px 0;
       filter: drop-shadow(0 0 2rem var(--clr-secondaryOrange) );
+    }
+
+    @media (max-width: 428px) {
+      padding: 0;
+      margin: 0;
+
+      .hero {
+        margin: 0;
+
+        .hero_text {
+          margin: 0;
+          width: 225px;
+          height: 240px;
+          padding: 0;
+
+          .check_circle {
+            margin: 0;
+          }
+        }
+      }
+
+      .hero_img {
+        width: 200px;
+        height: 230px;
+      }
+
+      .hero_btn {
+        width: 227px;
+        height: 60px;
+        padding: 8px 4px 8px 4px;
+        margin: 0;
+      }
+
+      .circle {
+        margin: 0;
+      }
     }
 `
 export default HeroSection

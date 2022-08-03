@@ -18,33 +18,33 @@
         },
         {
             "id": 4,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/Denin.png",
+            "categoryName": "Denin"
         },
         {
             "id": 5,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/Digital.png",
+            "categoryName": "Digital wireless laptop"
         },
         {
             "id": 6,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/Foam.png",
+            "categoryName": "Mouka"
         },
         {
             "id": 7,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/SonyTV.png",
+            "categoryName": "Sony TV"
         },
         {
             "id": 8,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/Durex.png",
+            "categoryName": "Durex"
         },
         {
             "id": 9,
-            "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryImg": "./images/categoryImages/Itel.png",
+            "categoryName": "Android"
         }
 
     ]
