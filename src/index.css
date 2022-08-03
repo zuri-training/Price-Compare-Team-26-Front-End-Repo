@@ -133,6 +133,14 @@ li {
     }
 }
 
+@media (max-width: 428px) {
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 .category_tile {
     background: var(--clr-primaryOrange5);
     border-radius: var(--borderRadius);

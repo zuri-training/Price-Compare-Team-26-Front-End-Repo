@@ -15,24 +15,34 @@ const Card = ({categoryImg, categoryName, bgColor, textColor }) => {
 
 
 const CardContainer = styled.div`
-    height:400px;
-    width: 400px;
-    padding: 60px 0;
-    border-radius: var(--borderRadius);
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height:400px;
+  width: 400px;
+  padding: 60px 0;
+  border-radius: var(--borderRadius);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    img{
-        border-radius: 50%;
+  img {
+    border-radius: 50%;
+  }
+  h3 {
+    color: var(--clr-background);
+    font-size: var(--titleLarge);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  @media (max-width: 428px) {
+    height:248px;
+    width: 248px;
+    padding: 30px 0 15px;
+
+    img {
+      width: 104px;
     }
-    h3 {
-        color: var(--clr-background);
-        font-size: var(--titleLarge);
-        text-align: center;
-        margin-top: 10px;
-    }
+  }
 `
 
 export default Card

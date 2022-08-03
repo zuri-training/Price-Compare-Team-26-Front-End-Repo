@@ -49,7 +49,23 @@ const CategoryContainer = styled.div`
                 font-weight: 600;
             }
         }
-    }    
+    }
+    
+    @media (max-width: 428px) {
+        margin-top: 140px;
+        .category_name {
+
+            h2 {
+                font-size: var(--titleMedium);
+            }
+
+            div{
+                .arrow_right {
+                    font-size: var(--titleMedium);
+                }
+            }
+        }
+    }
 
 `
 
