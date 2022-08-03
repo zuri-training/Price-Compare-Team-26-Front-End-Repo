@@ -197,7 +197,7 @@ const FooterContainer = styled.footer`
       display: block;
 
       ul {
-        line-height: 15px;
+        line-height: 20px;
         margin: 5px 0;
       }
 
@@ -209,11 +209,11 @@ const FooterContainer = styled.footer`
           align-self: normal;
   
           h2 {
-            font-size: var(--bodySmall);
+            font-size: var(--titleLarge);
           }
 
           ul li {
-            font-size: 10px;
+            font-size: var(--bodyMedium);
           }
   
         }
