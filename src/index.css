@@ -212,3 +212,54 @@ li {
 .text_container ol ol li{
     font-size: var(--bodyLarge);
 }
+
+@media (max-width: 428px) {
+    .text_container {
+        padding: 0;
+    }
+
+    .text_container ol {
+        padding-left: 15px;
+        margin: 0;
+    }
+    
+    .text_container h1 {
+        font-size: var(--titleSmall);
+    }
+    
+    .text_container p {
+        font-size: 8px;
+        margin: 6px 0 6px;
+    }
+    
+    .text_container h3 {
+        font-size: var(--bodySmall);
+    }
+    
+    .text_container ul {
+        margin: 7px 0 7px 13px;
+    }
+    
+    .text_container ul li {
+        line-height: 10px;
+        font-size: 8px;
+    }
+    
+    .text_container ol li {
+        font-size: var(--bodySmall);
+    }
+    
+    .text_container ol ul li {
+        font-size: 8px;
+    }
+    
+    .text_container ol p, .text_container ol ul p {
+        font-size: 8px;
+        line-height: 10px;
+    }
+    
+    
+    .text_container ol ol li{
+        font-size: var(--bodySmall);
+    }
+}

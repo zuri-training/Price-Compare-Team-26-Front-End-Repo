@@ -197,7 +197,8 @@ const FooterContainer = styled.footer`
       display: block;
 
       ul {
-        line-height: 24px;
+        line-height: 15px;
+        margin: 5px 0;
       }
 
       .footer_info {
@@ -208,11 +209,11 @@ const FooterContainer = styled.footer`
           align-self: normal;
   
           h2 {
-            font-size: var(--headlineSmall);
+            font-size: var(--bodySmall);
           }
 
           ul li {
-            font-size: var(--bodyLarge);
+            font-size: 10px;
           }
   
         }
