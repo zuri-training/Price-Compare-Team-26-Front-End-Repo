@@ -1,8 +1,7 @@
 import React from 'react'
 
 const AboutPage = () => {  
-  return (
-    <>    
+  return (   
     <div className='text_container'>
       <h1>About Us</h1>
       <p>In order to make the best decision, it’s good to have all the facts at your fingertips. We are one of the world’s best price and product comparison services, with one single goal – to guide consumers to smarter buying decisions.</p>
@@ -33,7 +32,6 @@ const AboutPage = () => {
       <p>We always show all prices that we know of, and you can always trust that we show them from the lowest to the highest. We always build our service around you, as a consumer.</p>
       <p>Make smarter purchase decisions with us!</p>
     </div>
-    </>
   )
 }
 
