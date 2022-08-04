@@ -3,7 +3,6 @@ import SVLogo from '../assets/images/SVLogo.png'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { MdMenu } from 'react-icons/md';
-import circle from '../assets/images/plain header.png'
 import { useDispatch } from 'react-redux';
 import { toggleSidebar } from '../features/user/userSlice';
 import SearchBar from './SearchBar';
