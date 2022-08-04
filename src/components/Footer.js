@@ -17,7 +17,7 @@ const Footer = () => {
           <div className='about_us'>
             <h2>About Us</h2>
             <ul>
-              <li onClick={scrollToTop}><Link to='about-us'>About PriceBeta</Link></li>
+              <li onClick={scrollToTop}><Link to='about-us'>About Scout Vendor</Link></li>
               <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
               <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
               <li><Link to='/'>FAQ</Link></li>
@@ -78,7 +78,7 @@ const FooterContainer = styled.footer`
   color: var(--clr-background);
   padding: 24px 64px 35px 72px;
 
-  @media (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     flex-direction: column;
     padding: 12px 32px 0 12px;
   }
