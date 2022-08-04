@@ -39,9 +39,6 @@ const SharedContainer = styled.section`
     .shared_layout {
       grid-template-columns: auto 1fr;
     }
-    .shared_pages {
-      width: 90%;
-    }
   }
 `
 

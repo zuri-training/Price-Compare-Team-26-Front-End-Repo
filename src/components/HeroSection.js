@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import heroimg from '../assets/images/hero-img.png'
 import { MdOutlineCheckCircle } from 'react-icons/md';
-import circle from '../assets/images/plain header.png';
 
 
 const HeroSection = () => {
@@ -25,7 +24,6 @@ const HeroSection = () => {
 
       <div>
           <img src={heroimg} alt="hero" className='hero_img' />
-          <img src={circle} alt="circle" className='circle' />        
       </div>
     </HeroContainer>
   )
@@ -37,9 +35,8 @@ const HeroContainer = styled.section`
     display: flex;
     justify-content: center;
     align-item: center;
-    padding: 68px 65px 0 66px;
-    margin-top: 48px;
-    margin-bottom: 48px; 
+    padding: 68px 0;
+    margin: 48px auto; 
     
     .hero {
       margin-top: 105px;     
@@ -73,13 +70,6 @@ const HeroContainer = styled.section`
       height: 60px;
       padding: 18px 0;
       margin-left: 60px;
-    }
-
-    .circle{
-      // position: relative;
-      // left: 800px;
-      margin: 30px 0;
-      filter: drop-shadow(0 0 2rem var(--clr-secondaryOrange) );
     }
 
     @media (max-width: 428px) {

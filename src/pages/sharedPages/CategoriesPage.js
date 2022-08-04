@@ -8,11 +8,11 @@ const CategoriesPage = () => {
   return (
     <CategoryPageContainer className='container'>
       <div className='feature_tiles'>
-        <CategoryTile title={'How to compare'}/>
-        <CategoryTile title={'Discount Deals'}/>
-        <CategoryTile title={'Get Coupons'}/>
-        <CategoryTile title={'Trending Deals'}/>
-        <CategoryTile title={'Logistics Services'}/>
+        <CategoryTile title={'How to compare'} path={"compare-price"}/>
+        <CategoryTile title={'Discount Deals'} path={"discount-deals"}/>
+        <CategoryTile title={'Get Coupons'} path={"/"}/>
+        <CategoryTile title={'Trending Deals'} path={"trending"}/>
+        <CategoryTile title={'Logistics Services'} path={"/"}/>
       </div>
 
       <div className='cards'>
@@ -28,18 +28,26 @@ const CategoriesPage = () => {
 }
 
 const CategoryPageContainer = styled.div`
+
   .feature_tiles {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px 25px;
     justify-items: center;
     margin-bottom: 90px;
+    padding: 20px 20px 0 20px;
   }
 
-  @media (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     .feature_tiles {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 428px) {
+    .feature_tiles {
+      grid-template-columns: 1fr;
       gap: 1rem;
     }
   }

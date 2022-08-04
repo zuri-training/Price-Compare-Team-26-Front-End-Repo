@@ -34,26 +34,26 @@ const SearchBar = () => {
 
 const Wrapper = styled.div`
     .search_field {
+      display: flex;
+      margin-top: 12px;
         
-        margin-top: 12px;
-        
-        input {
-            width: 596px;
-            height: 52px;
-            border: 1.2px solid var(--clr-grey5);
-            border-radius: var(--borderRadius);
-            background: var(--clr-background);
-            outline-color: var(--clr-grey5);
-            letter-spacing: var(--letterSpacing);
-            color: var(--clr-grey4);
-        }
-        input::placeholder {
-            color: var(--clr-grey4);
-            text-transform: capitalize;
-            letter-spacing: var(--letterSpacing);
-            padding: 14px 0 14px 16px;
-            font-size: var(--bodyMedium);
-        }
+      input {
+          width: 596px;
+          height: 52px;
+          border: 1.2px solid var(--clr-grey5);
+          border-radius: var(--borderRadius);
+          background: var(--clr-background);
+          outline-color: var(--clr-grey5);
+          letter-spacing: var(--letterSpacing);
+          color: var(--clr-grey4);
+      }
+      input::placeholder {
+          color: var(--clr-grey4);
+          text-transform: capitalize;
+          letter-spacing: var(--letterSpacing);
+          padding: 14px 0 14px 16px;
+          font-size: var(--bodyMedium);
+      }
 
         button {
             background: var(--clr-background);
@@ -72,7 +72,7 @@ const Wrapper = styled.div`
             }
         }
 
-        @media (max-width: 428px) {
+        @media screen and (max-width: 428px) {
             input {
                 width: 345px;
             }

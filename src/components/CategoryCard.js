@@ -34,6 +34,7 @@ const CategoryContainer = styled.div`
         align-items: center;
         justify-content: space-between;
         margin-bottom: 50px;
+        padding: 0 55px 0 65px;
 
         h2 {
             font-size: var(--headlineSmall);
@@ -54,6 +55,7 @@ const CategoryContainer = styled.div`
     @media (max-width: 428px) {
         margin-top: 140px;
         .category_name {
+            padding: 0 20px 0 30px;
 
             h2 {
                 font-size: var(--titleMedium);

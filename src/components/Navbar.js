@@ -36,13 +36,12 @@ const Navbar = () => {
 const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 10px 64px;
   border-radius: var(--borderRadius);
   margin: 0;
 
   .menu_logo {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: baseline;
     margin-top: 22px;
 
@@ -60,10 +59,8 @@ const NavContainer = styled.nav`
   }
 
   .btn_login {
-    width: 156px;
-    height: 56px;
-    padding: 18px 4px;
-    margin-top: 8px;
+    padding: 18px 21px;
+    margin: 10px 20px 10px 0;
   }
   @media (max-width: 428px) {
     flex-direction: column;
