@@ -119,7 +119,8 @@ const FooterContainer = styled.footer`
         @media (max-width: 992px){
           margin: 0;
         }
-      } 
+      }
+      
     }
     
     .newsletter {
@@ -202,30 +203,49 @@ const FooterContainer = styled.footer`
       }
 
       .footer_info {
-        display: block;
-        padding-left: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 66px;
 
         .about_us, .info, .catalogue {
           align-self: normal;
   
           h2 {
-            font-size: var(--titleLarge);
+            font-size: var(--headlineSmall);
           }
 
           ul li {
-            font-size: var(--bodyMedium);
+            font-size: var(--bodyLarge);
+            line-height: var(--lineHeight);
           }
   
+        }
+
+        .about_us, .info, .catalogue {
+          margin-top: 70px;
         }
       }
 
       .newsletter {
-        margin: 72px 24px;
-        width: 330px;
+        margin: 78px 28px 72px 32px;
+        padding: 10px 55px 22px;
+        width: 368px;
+        height: 330px;
         border: 2px solid #F6C598;
 
         p {
           font-size: var(--titleSmall);
+        }
+
+        input, button {
+          height: 52px;
+          width: 257px;
+          padding: 12px 4px;
+
+        }
+        button {
+          font-size: 20px;
+          margin-top: 12px;
         }
       }
 
@@ -234,6 +254,13 @@ const FooterContainer = styled.footer`
     .footer {
       margin-bottom: 20px;
       padding: 0 12px 22px 12px;
+
+      .footer_content {
+        .footer_logo {
+          width: 144px;
+          height: 24px;
+        }
+      }
     }
   
   }

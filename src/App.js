@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Footer, } from './components'
+import { Footer } from './components'
 import {
   About,
   DiscountDeals,
@@ -37,7 +37,7 @@ function App() {
           <Route path='*' element={<Error />} />
         </Route> 
       </Routes>
-      <Footer />
+      <Footer/>
     </Router>
   );
 }

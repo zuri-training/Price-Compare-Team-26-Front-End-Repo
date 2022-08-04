@@ -31,11 +31,11 @@ const BigSidebarContainer = styled.aside`
     .sidebar-container {
       min-height: 100vh;
       height: 100%;
-      width: 300px;
-      margin-left: -300px;
+      width: 225px;
+      margin-left: -2250px;
       padding-top: 170px;
       padding-bottom: 150px;
-      font-size: var(--titleLarge);
+      font-size: var(--titleSmall);
       transition: var(--transition);
     }
     .content {
@@ -55,13 +55,13 @@ const BigSidebarContainer = styled.aside`
       align-items: center;
       color: var(--clr-text-black);     
       padding: 1rem 0;
-      padding-left: 2.5rem;
+      padding-left: 1.5rem;
       text-transform: capitalize;
       transition: var(--transition);
       font-weight: 700;
     }
     .nav-link:hover {
-      padding-left: 3rem;
+      padding-left: 2rem;
       color: var(--clr-primaryOrange5);
     }
     

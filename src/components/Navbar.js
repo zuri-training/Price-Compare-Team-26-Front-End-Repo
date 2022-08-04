@@ -6,6 +6,7 @@ import { MdMenu } from 'react-icons/md';
 import circle from '../assets/images/plain header.png'
 import { useDispatch } from 'react-redux';
 import { toggleSidebar } from '../features/user/userSlice';
+import SearchBar from './SearchBar';
 
 const Navbar = () => {
   const dispatch = useDispatch()
@@ -26,7 +27,9 @@ const Navbar = () => {
         </Link>
       </div>
 
-      <img src={circle} alt="circle" />
+      <SearchBar/>
+
+      <button type='button' className='btn btn_login'>Login</button>
     </NavContainer>
   )
 }
@@ -36,10 +39,7 @@ const NavContainer = styled.nav`
   justify-content: space-between;
   padding: 10px 64px;
   border-radius: var(--borderRadius);
-
-  @media (max-width: 428px) {
-    padding: 0;
-  }
+  margin: 0;
 
   .menu_logo {
     display: flex;
@@ -59,10 +59,20 @@ const NavContainer = styled.nav`
     }
     
   }
+
+  .btn_login {
+    width: 156px;
+    height: 56px;
+    padding: 18px 4px;
+    margin-top: 8px;
+  }
   @media (max-width: 428px) {
+    flex-direction: column;
+    padding: 16px;
 
     .menu_logo {
       margin-top: 10px;
+      justify-content: flex-start;
 
       .toggle_btn {
         font-size: 45px;
@@ -73,9 +83,10 @@ const NavContainer = styled.nav`
         width: 190px;
       }
     }
-    img {
-      width: 50px;
+    .btn_login {
+      display: none;
     }
+
   }
   // @media (min-width: 992px) {
   //   position: sticky;

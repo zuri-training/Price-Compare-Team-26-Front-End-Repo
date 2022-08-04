@@ -3,7 +3,7 @@ import CategoryCard from './CategoryCard'
 
 const FeaturedCategories = () => {
   return (
-    <div>
+    <div className='container'>
       <CategoryCard/>
     </div>
   )

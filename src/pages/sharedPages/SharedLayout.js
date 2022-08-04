@@ -27,12 +27,12 @@ const SharedContainer = styled.section`
   .shared_layout {
     display: grid;
     grid-template-columns: 1fr;
+    
   }
 
   .shared_pages {
-    width: 90vw;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 0 auto;
   }
   
   @media (min-width: 992px) {
