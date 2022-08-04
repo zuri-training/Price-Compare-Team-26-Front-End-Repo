@@ -4,7 +4,7 @@ const RulesPage = () => {
   return (
     <div className='text_container'>
     <h1>Rules and Guides</h1>
-    <p>As a user of PriceBets website and services, you agree to follow this user rules.</p>
+    <p>As a user of Scout Vendor website and services, you agree to follow these user rules.</p>
     <ol>
         <li>Basic</li>
         <ul>
