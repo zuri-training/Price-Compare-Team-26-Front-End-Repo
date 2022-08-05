@@ -116,6 +116,11 @@ const FooterContainer = styled.footer`
           font-size: var(--headlineSmall);
         }
 
+        ul li {
+          font-size: var(--titleSmall);
+          line-height: var(--lineHeight);
+        }
+
         @media (max-width: 992px){
           margin: 0;
         }
@@ -215,7 +220,7 @@ const FooterContainer = styled.footer`
           }
 
           ul li {
-            font-size: var(--bodyLarge);
+            font-size: var(--bodyMedium);
             line-height: var(--lineHeight);
           }
   
