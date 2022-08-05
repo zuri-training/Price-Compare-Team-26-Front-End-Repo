@@ -1,24 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
 import NavLinks from './NavLinks';
-import { useSelector } from 'react-redux';
-
+import { useProductsContext } from '../context/products_context';
 
 const BigSidebar = () => {
-  const { isSidebarOpen } = useSelector((store) => store.user)
+  const { isSidebarOpen } = useProductsContext()
   return (
     <BigSidebarContainer>
       <div className={
-        isSidebarOpen ? 'sidebar-container'
-        : 'sidebar-container show-sidebar'
-      }>
-        <div className="content">
-           
+          isSidebarOpen ? 'sidebar-container'
+          : 'sidebar-container show-sidebar'
+        }>
+        <div className="content">           
             <NavLinks/>
         </div>
-
-        </div>
-     
+      </div>     
     </BigSidebarContainer>
   )
 }

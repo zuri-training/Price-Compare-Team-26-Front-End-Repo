@@ -4,20 +4,17 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { MdMenu } from 'react-icons/md';
 import { useDispatch } from 'react-redux';
-import { toggleSidebar } from '../features/user/userSlice';
 import SearchBar from './SearchBar';
+import { useProductsContext } from '../context/products_context';
 
 const Navbar = () => {
-  const dispatch = useDispatch()
-
-  const toggle = () => {
-    dispatch(toggleSidebar())
-  }
+  const { toggleSidebar } = useProductsContext()
+  
   return (
     <NavContainer className='nav_border'>
 
       <div className='menu_logo'>
-        <button type='button' className='toggle_btn' onClick={toggle}>
+        <button type='button' className='toggle_btn' onClick={toggleSidebar}>
             <MdMenu/>
         </button>
         
