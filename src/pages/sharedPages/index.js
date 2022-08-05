@@ -14,7 +14,8 @@ import Rules from "./RulesPage";
 import SharedLayout from "./SharedLayout";
 import SignUp from "./SignUpPage";
 import Trending from "./TrendingPage";
-
+import ProductDetails from "./ProductDetailsPage";
+import ProductLists from "./ProductListingPage";
 
 export {
     About,
@@ -24,6 +25,8 @@ export {
     Error,
     Trending,
     Profile,
+    ProductDetails,
+    ProductLists,
     Login,
     Logout,
     Rules,

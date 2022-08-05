@@ -9,7 +9,7 @@ import {
   Trending,
   Profile,
   Login,
-  Logout,
+  Logout, ProductLists, ProductDetails,
   SharedLayout, SignUp,
   Categories, ComparePrice, CookiePolicy,  Error, Privacy, Rules
 } from './pages/sharedPages'
@@ -33,6 +33,9 @@ function App() {
           <Route path='rules-guidelines' element={<Rules/>} />
           <Route path='compare-price' element={ <ComparePrice/>} />
           <Route path='product-categories' element={<Categories/>} />
+          <Route path='product-lists' element={<ProductLists/>} />
+          <Route path='product-details' element={<ProductDetails/>} />
+
           <Route path='sign-up' element={<SignUp/>} />       
           <Route path='*' element={<Error />} />
         </Route> 

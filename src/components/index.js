@@ -7,15 +7,25 @@ import CategoryCard from './CategoryCard'
 import BigSidebar from './BigSidebar'
 import SmallSidebar from './SmallSidebar'
 import CategoryTile from './CategoryTile'
+import Error from './Error'
+import Loading from './Loading'
+import ProductImages from './ProductImages'
+import PageHero from './PageHero'
+import Stars from './Stars'
 
 export {
     Contact,
     CategoryTile,
+    Error,
     FeaturedCategories,
     Footer,
     Navbar,
     Hero,
     CategoryCard,
     BigSidebar,
+    Loading,
     SmallSidebar,
+    ProductImages,
+    PageHero,
+    Stars
 }
