@@ -17,9 +17,10 @@ const CategoriesPage = () => {
 
       <div className='cards'>
       {data.all_categories.map((item) => {
-              const {id, categoryImg, categoryName} = item
+              const {id, categoryImg, categoryName, path} = item
               return (
-              <Card key={id} categoryImg={categoryImg} categoryName={categoryName} bgColor={'#ffffff'} textColor={'#131211'}/>
+              <Card key={id} categoryImg={categoryImg} categoryName={categoryName} 
+              path={path} bgColor={'#ffffff'} textColor={'#131211'}/>
               )
           })}
       </div>

@@ -4,12 +4,15 @@ import 'normalize.css';
 import './index.css';
 import App from './App';
 import { ProductsProvider } from './context/products_context';
+import { FilterProvider } from './context/filter_context';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
       <ProductsProvider>
-        <App />
+        <FilterProvider>
+          <App />
+        </FilterProvider>
       </ProductsProvider>
   </React.StrictMode>
 );

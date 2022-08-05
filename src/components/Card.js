@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Card = ({categoryImg, categoryName, bgColor, textColor }) => {
+const Card = ({categoryImg, categoryName, bgColor, textColor, path }) => {
   return (
     <CardContainer style={{backgroundColor: bgColor}}>
-        <Link to=''>
+        <Link to={path}>
         <img src={categoryImg} alt="card img" />
         <h3 style={{color: textColor}}>{categoryName}</h3>
         </Link>

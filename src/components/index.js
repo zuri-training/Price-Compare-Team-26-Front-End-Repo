@@ -12,12 +12,19 @@ import Loading from './Loading'
 import ProductImages from './ProductImages'
 import PageHero from './PageHero'
 import Stars from './Stars'
+import ProductList from './ProductList'
+import Sort from './Sort'
+import GridView from './GridView'
+import ListView from './ListView'
+import Filters from './Filters'
+
 
 export {
     Contact,
     CategoryTile,
     Error,
     FeaturedCategories,
+    Filters,
     Footer,
     Navbar,
     Hero,
@@ -27,5 +34,9 @@ export {
     SmallSidebar,
     ProductImages,
     PageHero,
-    Stars
+    ProductList,
+    Stars,
+    Sort,
+    GridView,
+    ListView
 }

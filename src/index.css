@@ -49,6 +49,7 @@ Variables
     --max-width: 1120px;
     --letterSpacing: 1px;
     --lineHeight: 24px;
+    --radius: 0.25rem;
 
 }
 
@@ -168,14 +169,14 @@ li {
     padding: 5rem 0;
   }
   .section-center {
-    width: 90vw;
+    width: 80vw;
     margin: 0 auto;
     max-width: var(--max-width);
   }
   
   @media screen and (min-width: 992px) {
     .section-center {
-      width: 95vw;
+      width: 80vw;
     }
   }
 

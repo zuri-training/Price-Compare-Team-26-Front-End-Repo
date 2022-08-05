@@ -4,47 +4,56 @@
         {
             "id": 1,
             "categoryImg": "./images/categoryImages/Electronics.png",
-            "categoryName": "Electronics"
+            "categoryName": "Electronics",
+            "path": "/"
         },
         {
             "id": 2,
             "categoryImg": "./images/categoryImages/Food.png",
-            "categoryName": "Food"
+            "categoryName": "Food",
+            "path": "/"
         },
         {
             "id": 3,
             "categoryImg": "./images/categoryImages/HomeOffice.png",
-            "categoryName": "Home Office"
+            "categoryName": "Home Office",
+            "path": "/"
         },
         {
             "id": 4,
             "categoryImg": "./images/categoryImages/Denin.png",
-            "categoryName": "Denin"
+            "categoryName": "Denin",
+            "path": "/"
         },
         {
             "id": 5,
             "categoryImg": "./images/categoryImages/Digital.png",
-            "categoryName": "Laptop"
+            "categoryName": "Laptop",
+            "path": "/"
         },
         {
             "id": 6,
             "categoryImg": "./images/categoryImages/Foam.png",
-            "categoryName": "Mouka"
+            "categoryName": "Mouka",
+            "path": "/"
         },
         {
             "id": 7,
             "categoryImg": "./images/categoryImages/SonyTV.png",
-            "categoryName": "Sony TV"
+            "categoryName": "Sony TV",
+            "path": "/"
         },
         {
             "id": 8,
             "categoryImg": "./images/categoryImages/Durex.png",
-            "categoryName": "Durex"
+            "categoryName": "Durex",
+            "path": "/"
         },
         {
             "id": 9,
             "categoryImg": "./images/categoryImages/Itel.png",
-            "categoryName": "Android"
+            "categoryName": "Android",
+            "path": "/"
         }
 
     ]

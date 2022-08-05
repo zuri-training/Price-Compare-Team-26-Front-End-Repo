@@ -27,9 +27,9 @@ const BigSidebarContainer = styled.aside`
     .sidebar-container {
       min-height: 100vh;
       height: 100%;
-      width: 225px;
-      margin-left: -2250px;
-      padding-top: 170px;
+      width: 200px;
+      margin-left: -200px;
+      padding-top: 175px;
       padding-bottom: 150px;
       font-size: var(--titleSmall);
       transition: var(--transition);
@@ -50,11 +50,10 @@ const BigSidebarContainer = styled.aside`
       display: flex;
       align-items: center;
       color: var(--clr-text-black);     
-      padding: 1rem 0;
-      padding-left: 1.5rem;
+      padding: 1.5rem 0 0 1rem;
       text-transform: capitalize;
       transition: var(--transition);
-      font-weight: 700;
+      font-weight: 600;
     }
     .nav-link:hover {
       padding-left: 2rem;

@@ -17,9 +17,10 @@ const CategoryCard = () => {
 
     <div className='cards'>
         {data.all_categories.map((item) => {
-            const {id, categoryImg, categoryName} = item
+            const {id, categoryImg, categoryName, path} = item
             return (
-            <Card key={id} categoryImg={categoryImg} categoryName={categoryName} bgColor={'#F6C598'}/>
+            <Card key={id} categoryImg={categoryImg} categoryName={categoryName}
+                path={path} bgColor={'#F6C598'}/>
             )
         })}
     </div>
