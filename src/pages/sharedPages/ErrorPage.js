@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import Error from '../../assets/images/Error404.png'
 
@@ -16,7 +17,9 @@ const ErrorPage = () => {
         <img src={Error} className='error_img' alt="error 404" />
       </div>
 
-      <button className='btn btn_error'>Go Back</button>
+      <Link to='/'>
+        <button className='btn btn_error'>Back To Home</button>
+      </Link>
     </ErrorContainer>
   )
 }
@@ -89,6 +92,7 @@ const ErrorContainer = styled.div`
     .btn_error {
       margin-top: 32px;
       width: -webkit-fill-available;
+      padding: 18px 10px;
     }
   }
 `

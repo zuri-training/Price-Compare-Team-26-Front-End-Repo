@@ -22,9 +22,10 @@ const Wrapper = styled.section`
 
   color: var(--clr-text-black);
   h3 {
-    a {
-      font-size: var(--bodyMedium);
-    }
+    text-transform: capitalize;
+    // a {
+    //   font-size: var(--bodyMedium);
+    // }
   }
   a {
     color: var(--clr-text-black);

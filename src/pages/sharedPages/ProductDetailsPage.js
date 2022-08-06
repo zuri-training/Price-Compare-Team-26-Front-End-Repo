@@ -53,7 +53,7 @@ const ProductDetailsPage = () => {
   return <Wrapper>
     <PageHero title={name} product/>
     <div className='section section-center page'>
-      <Link to='/product-lists' className='btn'>
+      <Link to='/product-lists' className='btn btn_back'>
         Back to products
       </Link>
       <div className='product-center'>
@@ -85,10 +85,20 @@ const ProductDetailsPage = () => {
 }
 
 const Wrapper = styled.main`
+
+  .btn_back {
+    padding: 10px 30px;
+  }
   .product-center {
     display: grid;
     gap: 4rem;
     margin-top: 2rem;
+
+    .content {
+      h2 {
+        text-transform: capitalize;
+      }
+    }
   }
   .price {
     color: var(--clr-primary-5);

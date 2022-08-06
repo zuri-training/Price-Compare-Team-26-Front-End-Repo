@@ -17,7 +17,7 @@
             "id": 3,
             "categoryImg": "./images/categoryImages/HomeOffice.png",
             "categoryName": "Home Office",
-            "path": "/"
+            "path": "product-lists"
         },
         {
             "id": 4,

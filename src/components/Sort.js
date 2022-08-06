@@ -78,7 +78,11 @@ const Wrapper = styled.section`
     text-transform: capitalize;
     margin: 0;
   }
-
+  hr {
+    border: none;
+    background: var(--clr-primaryOrange5);
+    width: -webkit-fill-available;
+  }
   .btn-container {
     display: grid;
     grid-template-columns: 1fr 1fr;

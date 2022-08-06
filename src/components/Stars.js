@@ -31,9 +31,8 @@ const Wrapper = styled.div`
     margin-right: 0.25rem;
   }
   p {
-    margin-left: 0.5rem;
-    margin-bottom: 0;
+    margin: 0;
   }
-  margin-bottom: 0.5rem;
+  margin: 0.5rem;
 `
 export default Stars

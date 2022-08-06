@@ -193,7 +193,7 @@ const Wrapper = styled.section`
     cursor: pointer;
   }
   .active {
-    border-color: var(--clr-grey6);
+    border-color: var(--clr-primaryOrange5);
   }
   .company {
     background: var(--clr-background);

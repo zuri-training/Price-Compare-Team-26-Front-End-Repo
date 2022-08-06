@@ -62,8 +62,8 @@ const HeroContainer = styled.section`
       }
     }
     .hero_img {
-      width: 650px;
-      height: 650px;
+      width: 730px;
+      height: 750px;
     }
     .hero_btn {
       width: 297px;
