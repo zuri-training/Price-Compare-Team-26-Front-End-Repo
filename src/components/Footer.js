@@ -81,6 +81,7 @@ const FooterContainer = styled.footer`
   @media screen and (max-width: 992px) {
     flex-direction: column;
     padding: 12px 32px 0 12px;
+    width: fit-content;
   }
 
   a {
@@ -198,6 +199,7 @@ const FooterContainer = styled.footer`
   @media (max-width: 428px) {
     display: block;
     padding: 50px 0 0 0;
+    width: fit-content;
 
     .footer_details {
       display: block;
@@ -234,8 +236,7 @@ const FooterContainer = styled.footer`
       .newsletter {
         margin: 78px 28px 72px 32px;
         padding: 10px 55px 22px;
-        width: 368px;
-        height: 330px;
+        width: -webkit-fill-available;
         border: 2px solid #F6C598;
 
         p {

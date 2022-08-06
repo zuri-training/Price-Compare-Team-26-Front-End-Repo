@@ -18,12 +18,15 @@ Variables
     --clr-text-black: #131211;
     --clr-text-headline: #140A00;
 
+    --clr-error: #E50909;
+
     --clr-grey3: #BCBBBA;
     --clr-grey4: #969595;
     --clr-grey5: #717070;
     --clr-grey6: #4B4B4A;
 
     --clr-background: #FFF7F0;
+    --clr-background2: #E1E0DF;
 
     --clr-secondaryOrange: #F6C598;
     --clr-primaryOrange5: #F88007;

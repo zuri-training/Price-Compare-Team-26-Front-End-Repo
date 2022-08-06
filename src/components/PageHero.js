@@ -21,6 +21,11 @@ const Wrapper = styled.section`
   align-items: center;
 
   color: var(--clr-text-black);
+  h3 {
+    a {
+      font-size: var(--bodyMedium);
+    }
+  }
   a {
     color: var(--clr-text-black);
     padding: 0.5rem;
