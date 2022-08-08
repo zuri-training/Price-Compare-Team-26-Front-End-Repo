@@ -29,6 +29,7 @@ Variables
     --clr-background2: #E1E0DF;
 
     --clr-secondaryOrange: #F6C598;
+    --clr-secondaryOrange4: #FADFC7;
     --clr-primaryOrange5: #F88007;
     --clr-primaryOrange4: #C66606;
 
@@ -76,6 +77,9 @@ h1 {
 h3 {
     font-size: var(--titleLarge);
 }
+h4 {
+    font-size: var(--titleSmall);
+}
 p{
     font-weight: 500;
 }
@@ -93,17 +97,6 @@ li {
     font-weight: 500;
 }
 
-.svlogo {
-    width: 230px;
-}
-
-.nav_border {
-    border: 1px solid var(--clr-primaryOrange4);
-    padding: 24px px;
-    margin-top: 8px;
-}
-
-
 .btn {
     background: var(--clr-primaryOrange5);
     border-radius: var(--borderRadius);
@@ -117,6 +110,8 @@ li {
 }
 
 .container {
+    /* width: 1128px; */
+    max-width: 1440px;
     margin: 0 auto;
 }
 
