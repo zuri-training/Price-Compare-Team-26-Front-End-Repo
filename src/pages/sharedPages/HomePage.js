@@ -6,7 +6,7 @@ const HomePage = () => {
   return (
     <HomeContainer className='container'>
     <Hero/>
-    <FeaturedCategories />
+    {/* <FeaturedCategories /> */}
     </HomeContainer>
   )
 }

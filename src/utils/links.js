@@ -6,50 +6,31 @@ const links = [
     },
     {
         id: 2,
-        text: 'Profile',
+        text: 'About SV',
         // path: 'profile',
-        path: 'coming-soon',
+        path: '/',
 
     }, 
     {
         id: 3,
-        text: 'Trending',
+        text: 'Contact Us',
         // path: 'trending',
-        path: 'coming-soon',
+        path: '/',
 
     }, 
     {
         id: 4,
-        text: 'Discount Deals',
+        text: 'FAQ',
         // path: 'discount-deals',
-        path: 'coming-soon',
+        path: '/',
 
     },
-    {
-        id: 5,
-        text: 'Login & Security',
-        // path: 'login-security',
-        path: 'coming-soon',
-    },
-    {
-        id: 6,
-        text: 'Email Preference',
-        // path: 'email-preferences',
-        path: 'coming-soon',
-    },
-    {
-        id: 7,
-        text: 'Favourites',
-        // path: 'email-preferences',
-        path: 'coming-soon',
-    },
-    {
-        id: 8,
-        text: 'Log Out',
-        // path: 'logout',
-        path: 'coming-soon',
-
-    },
+    // {
+    //     id: 5,
+    //     text: 'Login & Security',
+    //     // path: 'login-security',
+    //     path: 'coming-soon',
+    // },
 ]
 
 export default links

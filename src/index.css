@@ -66,8 +66,10 @@ h1,
 h2,
 h3,
 h4,
-h5 {
+h5,
+h6 {
     margin: 0;
+    text-transform: capitalize;
 }
 
 h1 {
@@ -107,6 +109,29 @@ li {
     font-size: var(--titleSmall);
     display: inline-block;
     transition: var(--transition);
+    padding: 14px 45px;
+}
+
+.btn:hover {
+    background: var(--clr-background);
+    color: var(--clr-primaryOrange5);
+}
+
+@media screen and (max-width: 428px) {
+    .btn {
+        padding: 6px 30px;
+        font-size: var(--bodyMedium);
+    }
+}
+
+.btn_active {
+    background: var(--clr-secondaryOrange4);
+    color: var(--clr-primaryOrange4);
+  }
+
+.btn_active:hover {
+background: var(--clr-primaryOrange4);
+color: var(--clr-secondaryOrange4);
 }
 
 .container {

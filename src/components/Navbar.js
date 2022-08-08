@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       <div>
         <button type='button' className='btn btn_signup'>Sign Up</button>
-        <button type='button' className='btn btn_login'>Login</button>
+        <button type='button' className='btn btn_active'>Login</button>
       </div>
     </NavContainer>
   )
@@ -57,36 +57,15 @@ const NavContainer = styled.nav`
   }
 
   .btn_signup {
-    padding: 14px 45px;
     margin-right: 32px;
   }
-
-  .btn_login {
-    padding: 14px 45px;
-    background: var(--clr-secondaryOrange4);
-    color: var(--clr-primaryOrange4);
-  }
-
-  .menu_logo {
-    .toggle_btn {
-      background: transparent;
-      border-color: transparent;
-      cursor: pointer;
-      color: var(--clr-primaryOrange5);
-      display: flex;
-      align-items: center;      
-      font-size: 44px;
-      margin-right: 28px;
-    }
-    
-  }
-
   
   @media (max-width: 428px) {
     padding: 22px 14px;
 
     .mobile_menu {
       color: var(--clr-primaryOrange5);
+      cursor: pointer;
       display: inline-flex;
       margin-right: 15px;
       font-size: var(--titleSmall);

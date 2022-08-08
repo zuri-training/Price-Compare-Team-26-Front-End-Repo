@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import { Footer } from './components'
+import { Navbar, Footer } from './components'
 import {
   About,
   DiscountDeals,
@@ -17,7 +17,8 @@ import {
 
 function App() {
   return (
-    <Router>      
+    <Router>
+      <Navbar/>
       <Routes>
         <Route path='/' element={<SharedLayout/>} >
           <Route index element={<Home/>} />
@@ -42,7 +43,7 @@ function App() {
           <Route path='*' element={<Error />} />
         </Route> 
       </Routes>
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
   );
 }

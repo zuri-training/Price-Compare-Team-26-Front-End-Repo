@@ -1,130 +1,112 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import heroimg from '../assets/images/hero-img.png'
-import { MdOutlineCheckCircle } from 'react-icons/md';
+import HeroImg from '../assets/svg/HeroImg.svg'
+import HeroImgMobile from '../assets/svg/HeroImgMobile.svg'
+
 
 
 const HeroSection = () => {
   return (
     <HeroContainer className=''>
       <div className='hero'>
+        <img src={HeroImg} alt="hero" className='' />
         <div className='hero_text'>
-        <h1>All Product Prices in One Place</h1>
-        <p><MdOutlineCheckCircle className='check_circle'/>Wide range prices</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Coupon price sourcing</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Quality description</p>
-        <p><MdOutlineCheckCircle className='check_circle'/>Discount Deals</p>
+          <h1>Enjoy the Ease of Searching & Comparing Prices All in One Place.</h1>
+          <div className='hero_btn'>
+            <Link to='/'><button className='btn btn_compare'>Compare</button></Link>
+            <Link to='/'><button className='btn btn_active'>How to Compare</button></Link>
+          </div>
         </div>
-
-        <Link to='sign-up'>
-        <button type='button' className='btn hero_btn'>Get Started</button>
-        </Link>
       </div>
 
-      <div>
-          <img src={heroimg} alt="hero" className='hero_img' />
+      <div className='hero_mobile'>
+        <img src={HeroImgMobile} alt="hero" className='' />
+        <div className='hero_text'>
+          <h1>Enjoy the Ease of Searching & Comparing Prices All in One Place.</h1>
+          <div className='hero_btn'><Link to='/'><button className='btn btn_compare'>Compare</button></Link>
+          <Link to='/'><button className='btn btn_active btn_htc'>How to Compare</button></Link>
+          </div>
+        </div>
       </div>
     </HeroContainer>
   )
 }
 
 const HeroContainer = styled.section`
-    border: 1px solid var(--clr-primaryOrange4);
-    border-radius: var(--borderRadius);
-    display: flex;
-    justify-content: center;
-    align-item: center;
-    padding: 68px 0;
-    margin: 48px auto; 
-    
-    .hero {
-      margin-top: 105px;     
-
-      .hero_text {
-        background: var(--clr-secondaryOrange);
-        padding: 30px 57px;
-        margin-bottom: 23px;
-        filter: drop-shadow(0 0 2rem var(--clr-secondaryOrange) );
-        height: 431px;
-        width: 400px;
-
-        p {
-          font-size: var(--body-Large);
-          color: var(--clr-text-black);
-          font-weight: 500;
-        }
-
-        .check_circle {
-          color: var(--clr-primaryOrange5);
-          margin-right: 17px;
-        }
-      }
-    }
-    .hero_img {
-      width: 730px;
-      height: 750px;
-    }
-    .hero_btn {
-      width: 297px;
-      height: 60px;
-      padding: 18px 0;
-      margin-left: 60px;
+  .hero_mobile {
+    display: none;
+  }
+  .hero {
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    img {
+      width: 1310px;
     }
 
-    @media (max-width: 428px) {
-      flex-direction: row-reverse;
-      border: none;
-      padding: 0;
-      margin: 0 0 100px 0;
+    .hero_text {
+      position: absolute;
+      padding: 20px;
+      bottom: 230px;
 
-      .hero {
-        margin: 0;
-
-        .hero_text {
-          margin: 0;
-          width: 200px;
-          height: 271px;
-          padding: 17px 0 0 15px;
-
-          h1 {
-            font-size: var(--titleSmall);
-            line-height: 24px;
-            width: 120px;
-          }
-
-          p {
-            font-size: var(--bodySmall);
-          }
-
-          .check_circle {
-            margin-right: 16px;
-          }
-        }
-      }
-
-      .hero_img {
-        align-self: center;
-        margin-top: 20px;
-        width: 200px;
-        height: 230px;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-        border-radius: var(--borderRadius);
+      h1 {
+        color: var(--clr-background);
+        width: 609px;
+        margin-bottom: 36px;
       }
 
       .hero_btn {
-        width: 297px;
-        height: 60px;
-        padding: 8px 4px 8px 4px;
-        margin: 45px 0 0 0;
-        position: absolute;
-        left: 15px;
+        display: flex;
+        align-items: flex-start;
+        // justify-content: center;
       }
 
-      .circle {
-        margin: 0;
-        display: none;
+      .btn_compare {
+        margin-right: 20px;
       }
     }
+  }
+    
+  @media (max-width: 428px) {
+    .hero {
+      display: none;
+    }
+    .hero_mobile {
+      display: block;
+      position: relative;
+
+      .hero_text {
+        position: absolute;
+        padding: 20px;
+        bottom: 30px;
+  
+        h1 {
+          color: var(--clr-background);
+          font-size: var(--titleLarge);
+          width: 272px;
+          margin-bottom: 18px;
+        }
+  
+        .hero_btn {
+          display: flex;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+  
+        .btn_compare {
+          margin-bottom: 16px;
+          padding: 6px 45px;
+        }
+
+        .btn_htc {
+          padding: 6px 16px;
+        }
+      }
+
+      
+    }
+    
+  }
 `
 export default HeroSection
