@@ -14,35 +14,35 @@ const Footer = () => {
     <FooterContainer>
       <div className='footer_details'>
       <div className='about_us'>
-            <h5>About Us</h5>
-            <ul>
-              <li onClick={scrollToTop}><Link to='about-us'>About Scout Vendor</Link></li>
-              <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
-              <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
-              <li><Link to='/'>FAQ</Link></li>
-            </ul>
-          </div>
-          <div className='info'>
-            <h5>Information</h5>
-            <ul>
-              <li onClick={scrollToTop}><Link to='rules-guidelines'>Rules and Guidelines</Link></li>
-              <li onClick={scrollToTop}><Link to='privacy-policy'>Privacy Policy</Link></li>
-              <li onClick={scrollToTop}><Link to='cookie-policy'>Cookie Policy</Link></li>
-            </ul>
-          </div>
-          <div className='catalogue'>
-            <h5>Catalogue</h5>
-            <ul>
-              <li><Link to='/'>Food & Edibles</Link> </li>
-              <li><Link to='/'>Electronics & Computers</Link> </li>
-              <li><Link to='/'>Mobile Phones</Link> </li>
-              <li><Link to='/'>Vehicles</Link> </li>
-              <li><Link to='/'>Equipments & Tools</Link> </li>
-              <li><Link to='/'>Fashion</Link> </li>
-              <li><Link to='/'>Health & Beauty</Link></li>
-              <li><Link to='/'>More...</Link></li>
-            </ul>          
-          </div>       
+          <h5>About Us</h5>
+          <ul>
+            <li onClick={scrollToTop}><Link to='about-us'>About Scout Vendor</Link></li>
+            <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
+            <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
+            <li><Link to='/'>FAQ</Link></li>
+          </ul>
+        </div>
+        <div className='info'>
+          <h5>Information</h5>
+          <ul>
+            <li onClick={scrollToTop}><Link to='rules-guidelines'>Rules and Guidelines</Link></li>
+            <li onClick={scrollToTop}><Link to='privacy-policy'>Privacy Policy</Link></li>
+            <li onClick={scrollToTop}><Link to='cookie-policy'>Cookie Policy</Link></li>
+          </ul>
+        </div>
+        <div className='catalogue'>
+          <h5>Catalogue</h5>
+          <ul>
+            <li><Link to='/'>Food & Edibles</Link> </li>
+            <li><Link to='/'>Electronics & Computers</Link> </li>
+            <li><Link to='/'>Mobile Phones</Link> </li>
+            <li><Link to='/'>Vehicles</Link> </li>
+            <li><Link to='/'>Equipments & Tools</Link> </li>
+            <li><Link to='/'>Fashion</Link> </li>
+            <li><Link to='/'>Health & Beauty</Link></li>
+            <li><Link to='/'>More...</Link></li>
+          </ul>          
+        </div>       
 
         <div className='newsletter'>
           <img src={Newsletter} alt="newsletter-logo" />
@@ -171,29 +171,36 @@ const FooterContainer = styled.footer`
   
 
   @media (max-width: 428px) {
-    display: block;
+    padding: 64px 0 25px;
 
     .footer_details {
-      display: block;
+      flex-direction: column;
 
-      ul {
-        line-height: 20px;
-        margin: 5px 0;
+      .about_us h5, .info h5, .catalogue h5 {
+        align-self: baseline;
+        font-size: var(--titleMedium);
+      }
+
+      .about_us, .info, .catalogue {
+        margin: 0 0 70px 64px;
+        ul {
+          li {
+            font-size: var(--bodyMedium);
+            line-height: var(--lineHeight);
+          }
+        }
+  
       }
 
       .newsletter {
-        padding: 10px 24px 22px;
+        padding: 10px 0 20px;
         border: 2px solid #F6C598;
+        margin: 30px 24px 67px 24px;
 
         p {
-          font-size: var(--titleMedium);
+          font-size: var(--titleSmall);
         }
 
-        input, button {
-          width: 257px;
-          padding: 12px 4px;
-
-        }
         button {
           font-size: 20px;
           margin-top: 12px;
@@ -207,9 +214,13 @@ const FooterContainer = styled.footer`
       padding: 0 12px 22px 12px;
 
       .footer_content {
+
         .footer_logo {
           width: 144px;
           height: 24px;
+        }
+        span {
+          font-size: 12px;
         }
       }
     }

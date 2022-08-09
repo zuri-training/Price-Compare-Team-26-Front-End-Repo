@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import SVLogo from '../assets/svg/SVLogoBlackOrange.svg'
 import { MdMenu } from 'react-icons/md';
-import { useDispatch } from 'react-redux';
-import SearchBar from './SearchBar';
 import { useProductsContext } from '../context/products_context';
 
 const Navbar = () => {

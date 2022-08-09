@@ -60,7 +60,7 @@ import {
         single_product_error: true,
       }
     }
-    return state
+    // return state
     throw new Error(`No Matching "${action.type}" - action type`)
   }
   

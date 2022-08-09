@@ -5,7 +5,7 @@ const FeaturedCard = ({content: {id, body, image}}) => {
   return (
     <StyledCard layout={id % 2 === 0 && 'row-reverse'}>
         <div>
-            <img src={`./images/featured/${image}`} alt="featured image" />
+            <img src={`./images/featured/${image}`} alt="featured img" />
         </div>        
         <div>
             <p>{body}</p>
