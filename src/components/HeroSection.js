@@ -14,8 +14,8 @@ const HeroSection = () => {
         <div className='hero_text'>
           <h1>Enjoy the Ease of Searching & Comparing Prices All in One Place.</h1>
           <div className='hero_btn'>
-            <Link to='/'><button className='btn btn_compare'>Compare</button></Link>
-            <Link to='/'><button className='btn btn_active'>How to Compare</button></Link>
+            <Link to='product-categories'><button className='btn btn_compare'>Compare</button></Link>
+            <Link to='compare-price'><button className='btn btn_active'>How to Compare</button></Link>
           </div>
         </div>
       </div>
@@ -24,8 +24,8 @@ const HeroSection = () => {
         <img src={HeroImgMobile} alt="hero" className='' />
         <div className='hero_text'>
           <h1>Enjoy the Ease of Searching & Comparing Prices All in One Place.</h1>
-          <div className='hero_btn'><Link to='/'><button className='btn btn_compare'>Compare</button></Link>
-          <Link to='/'><button className='btn btn_active btn_htc'>How to Compare</button></Link>
+          <div className='hero_btn'><Link to='product-categories'><button className='btn btn_compare'>Compare</button></Link>
+          <Link to='compare-price'><button className='btn btn_active btn_htc'>How to Compare</button></Link>
           </div>
         </div>
       </div>

@@ -10,14 +10,14 @@ const RulesPage = () => {
         <ul>
             <li>Members are permitted a maximum of one account per person. If you choose to ignore this restriction, all your accounts will be disabled. If you require a temporary user name for any reason, please contact us. If you have forgotten your login details and are unable to retrieve them via the system, do not create a new account, please contact us for assistance.</li>
             <li>This site is only for your personal use. You may not distribute, exchange, modify, sell or transmit anything you copy from this site, including, but not limited to, any text, images, audio and video, for any business, commercial or public purposes.</li>
-            <li>You are responsible for any posts originating from your user name account. PriceSpy does not vouch for or warrant the accuracy, completeness or usefulness of any message. Participants are urged to seek professional advice for specific, individual situations and not rely solely on advice or opinions given in the discussions.</li>
-            <li>You are responsible for any posts originating from your user name account. PriceSpy does not vouch for or warrant the accuracy, completeness or usefulness of any message. Participants are urged to seek professional advice for specific, individual situations and not rely solely on advice or opinions given in the discussions.</li>
+            <li>You are responsible for any posts originating from your user name account. Scout Vendor does not vouch for or warrant the accuracy, completeness or usefulness of any message. Participants are urged to seek professional advice for specific, individual situations and not rely solely on advice or opinions given in the discussions.</li>
+            <li>You are responsible for any posts originating from your user name account. Scout Vendor does not vouch for or warrant the accuracy, completeness or usefulness of any message. Participants are urged to seek professional advice for specific, individual situations and not rely solely on advice or opinions given in the discussions.</li>
             <li>Please be aware that all postings will become public and your text will be available to anyone with an internet connection.</li>
         </ul>
         <li>User Review Rules</li>
         <ul>
-            <li>User reviews may only be added by consumers and not by companies, nor by individuals with self-interest in the shop or the product, or by consumers closely linked to such persons. It may not be used to promote your own, or purposely damage someone else’s, business or reputation. Reviews may not contain links, questions, or discussions about other shops or products than the one being reviewed.</li>
-            <li>Business representatives may not on their initiative publish information about products and/or services offered by themselves or by their partners. However, it is permissible to answer members’ questions when addressed to a specific business, company or shop.</li>
+            <li>User reviews may only be added by consumers and not by companies, nor by individuals with self-interest in the shop or the product, or by consumers closely linked to such persons. It may not be used to promote your own, or purposely damage someone else's, business or reputation. Reviews may not contain links, questions, or discussions about other shops or products than the one being reviewed.</li>
+            <li>Business representatives may not on their initiative publish information about products and/or services offered by themselves or by their partners. However, it is permissible to answer members' questions when addressed to a specific business, company or shop.</li>
             <li>To reduce the risk that anything other than own experiences and opinions forms the basis of a review we do not allow reviews submitted in return for promised compensation (money, equipment, discounts, lottery tickets, etc.) or in return for participation in a prize competition or lottery. A review suspected of having been submitted under such conditions is seen as advertising and will be removed. Since we cannot determine why each review is submitted, all reviews submitted or updated during an ongoing campaign, prize competition or lottery, involving reviews on PriceBeta, will be removed.</li>
             <li>By using this service, you agree that you will not use the site to post (or link to) any material which is knowingly false and/or defamatory, inaccurate, abusive, vulgar, hateful, harassing, obscene, profane, threatening, or otherwise violative of any law.</li>
             <li>You agree not to post any copyrighted material unless the copyright is owned by you or on PriceBeta.</li>
@@ -30,13 +30,14 @@ const RulesPage = () => {
             <li>Reviews that violate our rules will be hidden. Depending on the circumstances, we may ask for an explanation or an update. If a member does not respond or is unable to provide a reasonable explanation the review will remain hidden.</li>
         </ul>
         <li>Rules for user reviews on products</li>
-        <ul>
-            <li>Opinions should be specific and based on facts. They should reflect the consumer's own experiences regarding product functionality, performance, quality, content, etc.</li>
-        </ul>
+        <p>Opinions should be specific and based on facts. They should reflect the 
+          consumer's own experiences regarding product functionality, performance, 
+          quality, content, etc.</p>
+        
         <li>Updates to these rules and guidelines</li>
-        <ul>
-            <li>We reserve the right to modify and amend these rules and guidelines at any time without notice. It is your responsibility to remain informed of current rules and guidelines.</li>
-        </ul>
+        
+        <p>We reserve the right to modify and amend these rules and guidelines at any time without notice. It is your responsibility to remain informed of current rules and guidelines.</p>
+        
     </ol>
     </div>
   )
