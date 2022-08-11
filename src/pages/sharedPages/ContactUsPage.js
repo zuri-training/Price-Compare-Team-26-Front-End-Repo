@@ -19,6 +19,7 @@ function ContactForm() {
               type="text" 
               name="fname"
               placeholder='Jane'
+              required
             />
             <ValidationError 
               prefix="First Name" 
@@ -38,6 +39,7 @@ function ContactForm() {
               type="text" 
               name="lname"
               placeholder='Dorothy'
+              required
             />
             <ValidationError 
               prefix="Last Name" 
@@ -54,6 +56,7 @@ function ContactForm() {
               type="email" 
               name="email"
               placeholder='Jane@example.com'
+              required
             />
             <ValidationError 
               prefix="Email" 
@@ -70,6 +73,7 @@ function ContactForm() {
               type="text" 
               name="phoneNumber"
               placeholder='Your phone number'
+              required
             />
             <ValidationError 
               prefix="Your Phone Number" 
@@ -87,6 +91,7 @@ function ContactForm() {
             id="message"
             name="message"
             placeholder='Write your message'
+            required
           />
           <ValidationError 
             prefix="Message" 
