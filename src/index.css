@@ -114,8 +114,7 @@ li {
 }
 
 .btn:hover {
-    background: var(--clr-background);
-    color: var(--clr-primaryOrange5);
+    background: var(--clr-primaryOrange4);
 }
 
 @media screen and (max-width: 428px) {
