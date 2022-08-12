@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import signup from '../../assets/svg/signup.svg'
+import signupmobile from '../../assets/svg/signupmobile.svg'
 import {FaGoogle} from 'react-icons/fa'
 
 const SignUpPage = () => {
@@ -12,7 +13,8 @@ const SignUpPage = () => {
         <p>Compare prices across a wide rage of websites 
           as well as get amazing deals from ScoutVendor.
         </p>
-        <img src={signup} alt="signup flower" />
+        <img src={signup} className='signupimg_desktop' alt="signup flower" />
+        <img src={signupmobile} className='signupimg_mobile' alt='signup flower' />
 
       </div>
 
@@ -47,7 +49,7 @@ const SignUpPage = () => {
         <button className='btn google_btn'> 
          <FaGoogle/> Sign up with Google</button>
 
-        <p> <input type="checkbox" /> 
+        <p className='t_c'> <input type="checkbox" /> 
              I agree to the Terms and Conditions.
         </p>
 
@@ -85,6 +87,10 @@ const SignUpWrapper = styled.div`
       line-height: 32px;
       font-size: 22px;
       margin-bottom: 52px;
+    }
+
+    .signupimg_mobile {
+      display: none;
     }
   }
 
@@ -134,13 +140,13 @@ const SignUpWrapper = styled.div`
       }
     }
 
-    p {
+    .t_c {
+      margin-top: 48px;
       input {
         margin-right: 5px;
       }
     }
     p {
-      margin-top: 48px;
       a {
         color: var(--clr-primaryOrange5);
         text-decoration: underline;
@@ -150,6 +156,84 @@ const SignUpWrapper = styled.div`
 
   @media screen and (max-width: 428px) {
     flex-direction: column;
+    margin-top: 22px;
+    padding: 72px 10px 12px;
+
+    .signup_text {
+      align-self: center;
+      margin: 0 0 36px;
+      padding: 0 24px;
+  
+      h1 {
+        line-height: 64px;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+      }
+      p {
+        line-height: 28px;
+        margin: 52px 0 26px;
+      }
+
+      .signupimg_desktop {
+        display: none;
+      }
+
+      .signupimg_mobile {
+        display: block;
+      }
+    }
+
+    .signup_form {
+      padding: 28px 24px 46px;
+      
+      h3 {
+        font-size: var(--headlineSmall);
+        text-align: justify;
+      }
+  
+      form {
+        display: flex;
+        flex-direction: column;
+        margin: 48px 0 0;
+
+  
+        input {
+          margin: 5px 0 30px 0;
+          height: 52px;
+  
+          &::placeholder {
+            padding-left: 12px;
+          }
+  
+          &:focus {
+            padding-left: 12px;
+          }
+        }
+
+        .signup_btn {
+          padding: 14px 92px;
+        }
+      }
+      .google_btn {
+        margin: 32px 0 0;
+        width: 100%;
+      }
+
+      .t_c {
+        margin-top: 32px;
+      }
+
+      p {
+        margin-top: 50px;
+        a {
+          margin-left: 47px;
+        }
+      }
+    }
+
+    
+    
   }
 `
 
