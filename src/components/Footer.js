@@ -13,38 +13,36 @@ const Footer = () => {
   return (
     <FooterContainer>
       <div className='footer_details'>
-        <div className="footer_info">
-          <div className='about_us'>
-            <h2>About Us</h2>
-            <ul>
-              <li onClick={scrollToTop}><Link to='about-us'>About PriceBeta</Link></li>
-              <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
-              <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
-              <li><Link to='/'>FAQ</Link></li>
-            </ul>
-          </div>
-          <div className='info'>
-            <h2>Information</h2>
-            <ul>
-              <li onClick={scrollToTop}><Link to='rules-guidelines'>Rules and Guidelines</Link></li>
-              <li onClick={scrollToTop}><Link to='privacy-policy'>Privacy Policy</Link></li>
-              <li onClick={scrollToTop}><Link to='cookie-policy'>Cookie Policy</Link></li>
-            </ul>
-          </div>
-          <div className='catalogue'>
-            <h2>Catalogue</h2>
-            <ul>
-              <li><Link to='/'>Food & Edibles</Link> </li>
-              <li><Link to='/'>Electronics & Computers</Link> </li>
-              <li><Link to='/'>Mobile Phones</Link> </li>
-              <li><Link to='/'>Vehicles</Link> </li>
-              <li><Link to='/'>Equipments & Tools</Link> </li>
-              <li><Link to='/'>Fashion</Link> </li>
-              <li><Link to='/'>Health & Beauty</Link></li>
-              <li><Link to='/'>More...</Link></li>
-            </ul>          
-          </div>
-        </div>        
+      <div className='about_us'>
+          <h5>About Us</h5>
+          <ul>
+            <li onClick={scrollToTop}><Link to='about-us'>About Scout Vendor</Link></li>
+            <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
+            <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
+            <li><Link to='/'>FAQ</Link></li>
+          </ul>
+        </div>
+        <div className='info'>
+          <h5>Information</h5>
+          <ul>
+            <li onClick={scrollToTop}><Link to='rules-guidelines'>Rules and Guidelines</Link></li>
+            <li onClick={scrollToTop}><Link to='privacy-policy'>Privacy Policy</Link></li>
+            <li onClick={scrollToTop}><Link to='cookie-policy'>Cookie Policy</Link></li>
+          </ul>
+        </div>
+        <div className='catalogue'>
+          <h5>Catalogue</h5>
+          <ul>
+            <li><Link to='/'>Food & Edibles</Link> </li>
+            <li><Link to='/'>Electronics & Computers</Link> </li>
+            <li><Link to='/'>Mobile Phones</Link> </li>
+            <li><Link to='/'>Vehicles</Link> </li>
+            <li><Link to='/'>Equipments & Tools</Link> </li>
+            <li><Link to='/'>Fashion</Link> </li>
+            <li><Link to='/'>Health & Beauty</Link></li>
+            <li><Link to='/'>More...</Link></li>
+          </ul>          
+        </div>       
 
         <div className='newsletter'>
           <img src={Newsletter} alt="newsletter-logo" />
@@ -74,14 +72,9 @@ const Footer = () => {
 
 const FooterContainer = styled.footer`
   display: block;
-  background: var(--clr-grey6);
+  background: var(--clr-primaryOrange1);
   color: var(--clr-background);
-  padding: 24px 64px 35px 72px;
-
-  @media (max-width: 992px) {
-    flex-direction: column;
-    padding: 12px 32px 0 12px;
-  }
+  padding: 64px;
 
   a {
     color: var(--clr-bcgWhite);
@@ -89,65 +82,53 @@ const FooterContainer = styled.footer`
 
   .footer_details {
     display: flex;
-    align-items: center;
-
-    @media (max-width: 992px) {
-      display: block;
-    }
-
-    ul {
-      line-height: 35px;
-    }
-
-    .footer_info {
-      display: flex;
-      align-items: center;
+    justify-content: space-between;
+    
+    .about_us h5, .info h5, .catalogue h5 {
       align-self: baseline;
+      font-size: var(--titleLarge);
+    }
 
-      @media (max-width: 992px){
-        flex-direction: column;
+    .about_us, .info, .catalogue {
+      ul {
+        li {
+          font-size: var(--bodyLarge);
+          line-height: 35px;
+        }
       }
-      
-      .about_us, .info, .catalogue {
-        align-self: normal;
-        margin-right: 40px;
 
-        h2 {
-          font-size: var(--headlineSmall);
-        }
-
-        @media (max-width: 992px){
-          margin: 0;
-        }
-      } 
     }
     
     .newsletter {
       background: var(--clr-secondaryOrange);
       width: 340px;
       color: var(--clr-black);
-      padding: 18px 32px 16px;
+      padding: 18px 24px 16px;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
 
-      @media (max-width: 992px) {
-        margin: 0;
-      }
-
       p {
-        font-size: 24px;
+        font-size: var(--titleMedium);
         text-align: center;
         font-weight: 600;
       }
 
       input, button {
-        height: 60px;
-        width: -webkit-fill-available;
+        width: 300px;
+        height: 52px;
         border-radius: var(--borderRadius);
         border-style: none;
         border: 1.2px solid #BCBBBA;
+      }
+
+      input::placeholder {
+        padding-left: 10px;
+      }
+      
+      input:focus {
+        padding-left: 20px;
       }
 
       button {
@@ -190,41 +171,39 @@ const FooterContainer = styled.footer`
   
 
   @media (max-width: 428px) {
-    display: block;
-    padding: 50px 0 0 0;
+    padding: 64px 0 25px;
 
     .footer_details {
-      display: block;
+      flex-direction: column;
 
-      ul {
-        line-height: 24px;
+      .about_us h5, .info h5, .catalogue h5 {
+        align-self: baseline;
+        font-size: var(--titleMedium);
       }
 
-      .footer_info {
-        display: block;
-        padding-left: 40px;
-
-        .about_us, .info, .catalogue {
-          align-self: normal;
-  
-          h2 {
-            font-size: var(--headlineSmall);
+      .about_us, .info, .catalogue {
+        margin: 0 0 70px 64px;
+        ul {
+          li {
+            font-size: var(--bodyMedium);
+            line-height: var(--lineHeight);
           }
-
-          ul li {
-            font-size: var(--bodyLarge);
-          }
-  
         }
+  
       }
 
       .newsletter {
-        margin: 72px 24px;
-        width: 330px;
+        padding: 10px 0 20px;
         border: 2px solid #F6C598;
+        margin: 30px 24px 67px 24px;
 
         p {
           font-size: var(--titleSmall);
+        }
+
+        button {
+          font-size: 20px;
+          margin-top: 12px;
         }
       }
 
@@ -233,6 +212,17 @@ const FooterContainer = styled.footer`
     .footer {
       margin-bottom: 20px;
       padding: 0 12px 22px 12px;
+
+      .footer_content {
+
+        .footer_logo {
+          width: 144px;
+          height: 24px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
     }
   
   }

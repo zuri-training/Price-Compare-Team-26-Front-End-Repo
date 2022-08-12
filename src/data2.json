@@ -3,77 +3,92 @@
         {
             "id": 1,
             "categoryImg": "./images/categoryImg/Groceries.png",
-            "categoryName": "Groceries"
+            "categoryName": "Groceries",
+            "path": "/"
         },
         {
             "id": 2,
             "categoryImg": "./images/categoryImg/Edibles.png",
-            "categoryName": "Food & Edibles"
+            "categoryName": "Food & Edibles",
+            "path": "/"
         },
         {
             "id": 3,
             "categoryImg": "./images/categoryImg/Computers.png",
-            "categoryName": "Electronics & Computers"
+            "categoryName": "Electronics & Computers",
+            "path": "/"
         },
         {
             "id": 4,
             "categoryImg": "./images/categoryImg/Computers.png",
-            "categoryName": "Cellphones"
+            "categoryName": "Cellphones",
+            "path": "/"
         },
         {
             "id": 5,
             "categoryImg": "./images/categoryImg/Vehicles.png",
-            "categoryName": "Vehicles"
+            "categoryName": "Vehicles",
+            "path": "/"
         },
         {
             "id": 6,
             "categoryImg": "./images/categoryImg/Tools.png",
-            "categoryName": "Equipments & Tools"
+            "categoryName": "Equipments & Tools",
+            "path": "/"
         },
         {
             "id": 7,
             "categoryImg": "./images/categoryImg/Fashion.png",
-            "categoryName": "Fashion"
+            "categoryName": "Fashion",
+            "path": "/"
         },
         {
             "id": 8,
             "categoryImg": "./images/categoryImg/Beauty.png",
-            "categoryName": "Health & Beauty"
+            "categoryName": "Health & Beauty",
+            "path": "/"
         },
         {
             "id": 9,
             "categoryImg": "./images/categoryImg/Jewelry.png",
-            "categoryName": "Jewelries"
+            "categoryName": "Jewelries",
+            "path": "/"
         },
         {
             "id": 10,
             "categoryImg": "./images/categoryImg/Sports.png",
-            "categoryName": "Sports & Games"
+            "categoryName": "Sports & Games",
+            "path": "/"
         },
         {
             "id": 11,
             "categoryImg": "./images/categoryImg/Books.png",
-            "categoryName": "Books & Arts"
+            "categoryName": "Books & Arts",
+            "path": "/"
         },
         {
             "id": 12,
             "categoryImg": "./images/categoryImg/Babies.png",
-            "categoryName": "Babies and Kids"
+            "categoryName": "Babies and Kids",
+            "path": "/"
         },
         {
             "id": 13,
             "categoryImg": "./images/categoryImg/Pets.png",
-            "categoryName": "For Pets"
+            "categoryName": "For Pets",
+            "path": "/"
         },
         {
             "id": 14,
             "categoryImg": "./images/categoryImg/Games.png",
-            "categoryName": "Games & Consoles"
+            "categoryName": "Games & Consoles",
+            "path": "/"
         },
         {
             "id": 15,
             "categoryImg": "./images/categoryImg/Home.png",
-            "categoryName": "Home Office"
+            "categoryName": "Home Office",
+            "path": "/product-lists"
         }
 
     ]

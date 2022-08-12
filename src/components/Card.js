@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
-const Card = ({categoryImg, categoryName, bgColor, textColor }) => {
+const Card = ({categoryImg, categoryName, bgColor, textColor, path }) => {
   return (
     <CardContainer style={{backgroundColor: bgColor}}>
-        <Link to=''>
+        <Link to={path}>
         <img src={categoryImg} alt="card img" />
         <h3 style={{color: textColor}}>{categoryName}</h3>
         </Link>
@@ -15,9 +15,7 @@ const Card = ({categoryImg, categoryName, bgColor, textColor }) => {
 
 
 const CardContainer = styled.div`
-  height:400px;
-  width: 400px;
-  padding: 60px 0;
+  padding: 30px 30px;
   border-radius: var(--borderRadius);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.06);
   display: flex;
@@ -28,20 +26,14 @@ const CardContainer = styled.div`
     border-radius: 50%;
   }
   h3 {
-    color: var(--clr-background);
-    font-size: var(--titleLarge);
+    color: var(--clr-text-black);
+    font-size: var(--titleSmall);
     text-align: center;
     margin-top: 10px;
   }
 
   @media (max-width: 428px) {
-    height:248px;
-    width: 248px;
-    padding: 30px 0 15px;
-
-    img {
-      width: 104px;
-    }
+    padding: 20px 20px;
   }
 `
 

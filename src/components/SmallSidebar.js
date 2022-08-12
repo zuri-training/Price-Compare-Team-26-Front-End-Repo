@@ -2,25 +2,20 @@ import React from 'react'
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa';
 import NavLinks from './NavLinks';
-import { useSelector, useDispatch } from 'react-redux';
-import { toggleSidebar } from '../features/user/userSlice';
+import { useProductsContext } from '../context/products_context';
 
 const SmallSidebar = () => {
-    const { isSidebarOpen } = useSelector((store) => store.user)
-    const dispatch = useDispatch();
-    const toggle = () => {
-        dispatch(toggleSidebar())
-    }
+    const { isSidebarOpen, toggleSidebar } = useProductsContext()
   return (
     <SidebarContainer>
         <div className={isSidebarOpen ? 'sidebar-container show-sidebar'
         : 'sidebar-container'   
     }>
         <div className="content">
-            <button className='close-btn' onClick={toggle}>
+            <button className='close-btn' onClick={toggleSidebar}>
                 <FaTimes/>
             </button>
-            <NavLinks toggleSidebar={toggle}/>
+            <NavLinks toggleSidebar={toggleSidebar}/>
         </div>
 
         </div>

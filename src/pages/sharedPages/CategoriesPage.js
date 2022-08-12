@@ -1,46 +1,48 @@
 import React from 'react'
 import styled from 'styled-components'
-import { CategoryTile } from '../../components'
 import Card from '../../components/Card'
 import data from '../../data2.json'
-
+import SearchBar from '../../components/SearchBar'
 const CategoriesPage = () => {
   return (
     <CategoryPageContainer className='container'>
-      <div className='feature_tiles'>
-        <CategoryTile title={'How to compare'}/>
-        <CategoryTile title={'Discount Deals'}/>
-        <CategoryTile title={'Get Coupons'}/>
-        <CategoryTile title={'Trending Deals'}/>
-        <CategoryTile title={'Logistics Services'}/>
-      </div>
+      <SearchBar/>
 
-      <div className='cards'>
+      <div className=''>
+      <h2>Categories</h2>
+
+       <div className='cards cards_container'>
       {data.all_categories.map((item) => {
-              const {id, categoryImg, categoryName} = item
+              const {id, categoryImg, categoryName, path} = item
               return (
-              <Card key={id} categoryImg={categoryImg} categoryName={categoryName} bgColor={'#ffffff'} textColor={'#131211'}/>
+              <Card key={id} categoryImg={categoryImg} categoryName={categoryName} 
+              path={path} bgColor={'#ffffff'} textColor={'#131211'}/>
               )
           })}
+          </div>
       </div>
     </CategoryPageContainer>
   )
 }
 
 const CategoryPageContainer = styled.div`
-  .feature_tiles {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px 25px;
-    justify-items: center;
-    margin-bottom: 90px;
+  padding-left: 64px; 
+  
+  h2 {
+    margin: 40px 0 40px;
   }
 
-  @media (max-width: 992px) {
+  @media screen and (max-width: 992px) {
     .feature_tiles {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       gap: 1rem;
+    }
+  }
+
+  @media screen and (max-width: 428px) {
+    padding-left: 8px;
+    h2 {
+      margin: 28px 0;
     }
   }
 
