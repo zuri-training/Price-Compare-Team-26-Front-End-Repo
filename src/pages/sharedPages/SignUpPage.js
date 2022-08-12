@@ -1,9 +1,156 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import styled from 'styled-components'
+import signup from '../../assets/svg/signup.svg'
+import {FaGoogle} from 'react-icons/fa'
 
 const SignUpPage = () => {
   return (
-    <div>SignUpPage</div>
+    <SignUpWrapper>
+      <div className='signup_text'>
+        <h1>Get Started With Us</h1>
+        <p>Compare prices across a wide rage of websites 
+          as well as get amazing deals from ScoutVendor.
+        </p>
+        <img src={signup} alt="signup flower" />
+
+      </div>
+
+      <div className='signup_form'>
+        <h3>Sign Up</h3>
+        <hr />
+        <form action="">
+          <label htmlFor="">Full Name</label>
+          <input 
+            type="text" 
+            placeholder='Jane Dorothy'
+            required
+          />
+
+          <label htmlFor="">Email Address</label>
+          <input 
+            type="email"
+            placeholder='janedorothy@email.com'  
+          />
+
+          <label htmlFor="">Password</label>
+          <input type="password" />
+
+          <label htmlFor="">Confirm Password</label>
+          <input type="password2" />
+
+          <button type="submit" className='btn signup_btn'>
+          Sign Up with email
+          </button>
+        </form>
+
+        <button className='btn google_btn'> 
+         <FaGoogle/> Sign up with Google</button>
+
+        <p> <input type="checkbox" /> 
+             I agree to the Terms and Conditions.
+        </p>
+
+
+        <p>By completing this form, you acknowledge 
+          that you understand the privacy policy.
+        </p>
+
+        <p>Already have an account? <Link to='login-security'>Login Here</Link> </p>
+
+      </div>
+
+
+    </SignUpWrapper>
   )
 }
+
+const SignUpWrapper = styled.div`
+  background: var(--clr-primaryOrange5);
+  color: var(--clr-white);
+  display: flex;
+  justify-content: space-between;
+  padding: 64px 82px 48px 104px;
+
+  .signup_text {
+    align-self: center;
+    margin-right: 200px;
+
+    h1 {
+      line-height: 64px;
+      margin-bottom: 36px;
+      width: max-content;
+    }
+    p {
+      line-height: 32px;
+      font-size: 22px;
+      margin-bottom: 52px;
+    }
+  }
+
+  .signup_form {
+    background: var(--clr-background);
+    border-radius: 16px;
+    color: var(--clr-text-black);
+    padding: 24px;
+    
+    h3 {
+      font-size: var(--headlineSmall);
+      margin-bottom: 48px;
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      margin: 48px 0 32px;
+
+      input {
+        border: 1.2px solid var(--clr-grey4);
+        border-radius: var(--borderRadius);
+        background: var(--clr-background);
+        font-family: var(--bodyFont);
+        margin: 5px 0 30px 0;
+        height: 52px;
+
+        &::placeholder {
+          padding-left: 12px;
+        }
+
+        &:focus {
+          padding-left: 12px;
+        }
+      }
+    }
+
+    .google_btn {
+      background: var(--clr-text-black);
+      padding: 14px 100px 14px 25px;
+      margin-bottom: 32px;
+      width: max-content;
+
+      svg {
+        margin-right: 50px;
+      }
+    }
+
+    p {
+      input {
+        margin-right: 5px;
+      }
+    }
+    p {
+      margin-top: 48px;
+      a {
+        color: var(--clr-primaryOrange5);
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 428px) {
+    flex-direction: column;
+  }
+`
 
 export default SignUpPage
