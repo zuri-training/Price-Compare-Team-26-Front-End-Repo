@@ -1,11 +1,53 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { toast } from 'react-toastify'
+import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import signup from '../../assets/svg/signup.svg'
 import signupmobile from '../../assets/svg/signupmobile.svg'
 import {FaGoogle} from 'react-icons/fa'
+import { registerUser } from '../../features/user/userSlice'
+// import FormField from '../../components/FormField'
 
-const SignUpPage = () => {
+const initialState = {
+  first_name: '',
+  last_name: '',
+  email: '',
+  password: '',
+}
+
+function SignUpPage() {
+  const [values, setValues] = useState(initialState)
+  const {user, isLoading} = useSelector(store => store.user)
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+
+  const handleChange = (e) => {
+    const name = e.target.name
+    const value = e.target.value
+    setValues({...values, [name]: value})
+  }
+
+  const onSubmit = (e) => {
+    e.preventDefault()
+    const { first_name, last_name, email, password } = values
+    if(!email || !password || !first_name || !last_name) {
+      toast.error('Please Fill Out all Fields')
+    }
+    dispatch(registerUser({ first_name, last_name, email, password }))
+    console.log(values)
+  }
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate('/')
+      }, 2000)
+    }
+  }, [user])
+
   return (
     <SignUpWrapper>
       <div className='signup_text'>
@@ -21,27 +63,46 @@ const SignUpPage = () => {
       <div className='signup_form'>
         <h3>Sign Up</h3>
         <hr />
-        <form action="">
-          <label htmlFor="">Full Name</label>
+        <form onSubmit={onSubmit}>
+          
+          <label htmlFor="first_name">First Name</label>
           <input 
-            type="text" 
-            placeholder='Jane Dorothy'
-            required
+            type="text"
+            name='first_name'
+            value={values.name}
+            onChange={handleChange}
+            placeholder='Jane'
+          />
+          <label htmlFor="last_name">Last Name</label>
+          <input 
+            type="text"
+            name='last_name'
+            value={values.name}
+            onChange={handleChange}
+            placeholder='Dorothy'
           />
 
-          <label htmlFor="">Email Address</label>
+          <label htmlFor="email">Email Address</label>
           <input 
             type="email"
+            name='email'
+            value={values.email}
+            onChange={handleChange}
             placeholder='janedorothy@email.com'  
           />
 
-          <label htmlFor="">Password</label>
-          <input type="password" />
+          <label htmlFor="password">Password</label>
+          <input 
+            type="password"
+            name='password'
+            value={values.password}
+            onChange={handleChange}
+            placeholder='Enter Password'          
+          />
 
-          <label htmlFor="">Confirm Password</label>
-          <input type="password2" />
-
-          <button type="submit" className='btn signup_btn'>
+          <button type="submit" className='btn signup_btn'
+            disabled={isLoading}
+          >
           Sign Up with email
           </button>
         </form>
@@ -49,16 +110,15 @@ const SignUpPage = () => {
         <button className='btn google_btn'> 
          <FaGoogle/> Sign up with Google</button>
 
-        <p className='t_c'> <input type="checkbox" /> 
+        <p className='t_c'> <input type="checkbox" required/> 
              I agree to the Terms and Conditions.
         </p>
-
 
         <p>By completing this form, you acknowledge 
           that you understand the privacy policy.
         </p>
 
-        <p>Already have an account? <Link to='login-security'>Login Here</Link> </p>
+        <p>Already have an account? <Link to='../login'>Login Here</Link> </p>
 
       </div>
 
@@ -111,7 +171,7 @@ const SignUpWrapper = styled.div`
       flex-direction: column;
       margin: 48px 0 32px;
 
-      input {
+      .form_field {
         border: 1.2px solid var(--clr-grey4);
         border-radius: var(--borderRadius);
         background: var(--clr-background);
@@ -120,11 +180,25 @@ const SignUpWrapper = styled.div`
         height: 52px;
 
         &::placeholder {
-          padding-left: 12px;
+          padding-left: 8px;
         }
 
         &:focus {
           padding-left: 12px;
+        }
+      }
+
+      input {
+        border: 1.2px solid var(--clr-grey4);
+        border-radius: var(--borderRadius);
+        background: var(--clr-background);
+        font-family: var(--bodyFont);
+        margin: 5px 0 30px 0;
+        height: 52px;
+        padding-left: 12px;
+
+        &::placeholder {
+          padding-left: 8px;
         }
       }
     }

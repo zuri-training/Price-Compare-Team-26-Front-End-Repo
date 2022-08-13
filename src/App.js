@@ -1,5 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import { Navbar, Footer } from './components'
 import {
   About,
@@ -25,7 +27,7 @@ function App() {
           <Route path='discount-deals' element={<DiscountDeals/>} />
           <Route path='profile' element={<Profile/>} />
           <Route path='trending' element={<Trending/>} />
-          <Route path='login-security' element={<Login/>} />
+          <Route path='login' element={<Login/>} />
           <Route path='logout' element={<Logout/>} />
           <Route path='email-preferences' element={<EmailPreference/>} />
           <Route path='about-us' element={<About/>} />
@@ -44,6 +46,7 @@ function App() {
         </Route> 
       </Routes>
       <Footer/>
+      <ToastContainer position='top-right'/>
     </Router>
   );
 }
