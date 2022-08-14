@@ -40,10 +40,10 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         logoutUser: (state) => {
+            toast.success(`Goodbye! ${state.user.first_name}`)
             state.user = null;
             removeUserFromLocalStorage();
             removeTokensFromLocalStorage();
-            toast.success(`Goodbye!`)
         },
         toggleSidebar: (state) => {
             state.isSidebarOpen = !state.isSidebarOpen
@@ -57,7 +57,7 @@ const userSlice = createSlice({
             state.isloading = false;
             const { user } = payload;
             state.user = user;
-            console.log(payload)
+            // console.log(payload)
             addUserToLocalStorage(user);
             toast.success(`Hello There`)
         },
@@ -73,12 +73,11 @@ const userSlice = createSlice({
         },
         [loginUser.fulfilled]: (state, { payload }) => {
             state.isloading = false;
-            const { tokens } = payload
-            state.user = tokens;
-            console.log(tokens);
+            const { data, tokens } = payload
+            state.user = data;
             addTokensToLocalStorage(tokens)
-            addUserToLocalStorage(tokens);
-            toast.success(`Welcome Back`)
+            addUserToLocalStorage(data);
+            toast.success(`Welcome Back ${data.first_name}`)
         },
         [loginUser.rejected]: (state, { payload }) => {
             state.isLoading = false;

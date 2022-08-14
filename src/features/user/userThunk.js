@@ -1,13 +1,12 @@
 import customFetch from "../../utils/axios";
 
-
 export const registerUserThunk = async (url, user, thunkAPI) => {
     try {
         const resp = await customFetch.post(url, user)
-        console.log(resp)
+        // console.log(resp)
         return resp.data;
     } catch (error) {
-        console.log(error.response.data)
+        // console.log(error.response.data)
         return thunkAPI.rejectWithValue(error.response.data)        
     }
 }
@@ -15,10 +14,10 @@ export const registerUserThunk = async (url, user, thunkAPI) => {
 export const loginUserThunk = async (url, user, thunkAPI) => {
     try {
         const resp = await customFetch.post(url, user);
-        console.log(resp)
+        // console.log(resp)
         return resp.data;
     } catch (error) {
-        console.log(error)
+        // console.log(error)
         return thunkAPI.rejectWithValue(error.response.data);        
     }
 };

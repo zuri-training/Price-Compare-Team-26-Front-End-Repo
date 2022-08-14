@@ -36,7 +36,7 @@ const LoginPage = () => {
       toast.error('Please Fill Out all Fields')
     }
     dispatch(loginUser({ email, password }))
-    console.log(values)
+    // console.log(values)
   }
 
   useEffect(() => {

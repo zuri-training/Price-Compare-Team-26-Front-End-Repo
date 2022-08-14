@@ -17,7 +17,9 @@ import Sort from './Sort'
 import GridView from './GridView'
 import ListView from './ListView'
 import Filters from './Filters'
-
+import PageBtnContainer from './PageBtnContainer'
+import ProductCard from './ProductCard'
+import SearchBar from './SearchBar'
 
 export {
     Contact,
@@ -35,8 +37,11 @@ export {
     ProductImages,
     PageHero,
     ProductList,
+    ProductCard,
+    PageBtnContainer,
     Stars,
     Sort,
     GridView,
-    ListView
+    ListView,
+    SearchBar
 }

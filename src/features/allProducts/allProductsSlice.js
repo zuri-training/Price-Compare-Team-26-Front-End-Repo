@@ -46,10 +46,10 @@ const allProductsSlice = createSlice({
         [getAllProducts.fulfilled]: (state, {payload} ) => {
             state.isLoading = false;
             // console.log(payload)
-            const { count, results } = payload
+            const { total_count, total_pages, results } = payload
             state.products = results;
-            state.totalProducts = count;
-            state.numOfPages = Math.ceil(count/results.length);
+            state.totalProducts = total_count;
+            state.numOfPages = total_pages;
         },
         [getAllProducts.rejected]: (state, {payload}) => {
             state.isLoading = false;

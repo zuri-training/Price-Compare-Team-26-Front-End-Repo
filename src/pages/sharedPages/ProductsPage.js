@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Loading } from '../../components'
-import PageBtnContainer from '../../components/PageBtnContainer'
+import styled from 'styled-components'
+import { Loading, PageBtnContainer, ProductCard, SearchBar } from '../../components'
 import { getAllProducts } from '../../features/allProducts/allProductsSlice'
-
 
 const ProductsPage = () => {
   const {
@@ -18,7 +17,9 @@ const ProductsPage = () => {
   const dispatch = useDispatch()
 
   useEffect(() => {
-    dispatch(getAllProducts())
+    setTimeout(() => {
+      dispatch(getAllProducts())
+    }, 4000)
   }, [page, search])
 
   if (isLoading) {
@@ -34,14 +35,28 @@ const ProductsPage = () => {
   }
 
   return (
-    <div>
-      <h5>
-        {totalProducts} Product{products.length > 1 && 's'} available{' '}
-      </h5>
-      <h2>Products</h2>
-      {numOfPages > 1 && <PageBtnContainer/>}
-    </div>
+    <>
+      <SearchBar/>
+      <ProductsPageWrapper>
+        <h4>
+          {totalProducts} Product{products.length > 1 && 's'} available{' '}
+        </h4>
+        <div>
+          {products.map((product) => {
+            const { id, category, name, brand} = product
+            return <ProductCard category={category} name={name} brand={brand} key={id}/>
+          })
+          }
+        </div>
+        {numOfPages > 1 && <PageBtnContainer/>}
+      </ProductsPageWrapper>
+    </>
   )
 }
+
+const ProductsPageWrapper = styled.div`
+  margin-top: 40px;
+  padding: 0 72px;
+`
 
 export default ProductsPage
