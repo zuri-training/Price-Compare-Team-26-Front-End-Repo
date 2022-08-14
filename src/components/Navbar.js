@@ -4,8 +4,14 @@ import styled from 'styled-components'
 import SVLogo from '../assets/svg/SVLogoBlackOrange.svg'
 import { MdMenu } from 'react-icons/md';
 import { useProductsContext } from '../context/products_context';
+import { useSelector, useDispatch } from 'react-redux';
+import { logoutUser } from '../features/user/userSlice';
 
 const Navbar = () => {
+  const { user } = useSelector((store) => store.user)
+  const dispatch = useDispatch()
+
+
   const { toggleSidebar } = useProductsContext()
   
   return (
@@ -23,9 +29,19 @@ const Navbar = () => {
         <Link to='/contact-us'>Contact</Link>
       </div>
       <div className='nav_btn'>
-        <button type='button' className='btn btn_signup'>Sign Up</button>
-        <button type='button' className='btn btn_active'>Login</button>
-      </div>
+        { user ? 
+          <button 
+          type='button' 
+          className='btn btn_active'
+          onClick={() => dispatch(logoutUser())}
+          >Logout</button>
+        :
+          <>
+          <Link to='sign-up'><button type='button' className='btn btn_signup'> Sign Up </button></Link>
+          <Link to='login'><button type='button' className='btn btn_active'>Login</button></Link>
+          </>
+        }
+        </div>
     </NavContainer>
   )
 }

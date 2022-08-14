@@ -8,6 +8,18 @@ export const removeUserFromLocalStorage = () => {
 
 export const getUserFromLocalStorage = () => {
     const result = localStorage.getItem('user')
-    const user = result ? JSON.parse(result) : null
-    return user
+    // const user = result ? JSON.parse(result) : null
+    return result
+}
+
+export const addTokensToLocalStorage = (tokens) => {
+    localStorage.setItem('tokens', JSON.stringify(tokens))
+}
+
+export const removeTokensFromLocalStorage = (tokens) => {
+    localStorage.removeItem('tokens')
+}
+
+export const getTokensFromLocalStorage = (tokens) => {
+    localStorage.getItem('tokens')
 }

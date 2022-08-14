@@ -11,7 +11,7 @@ const FeaturedCategories = () => {
       <div className='featuredDesktop'>
       <h2>Scout Vendor  Unique Features</h2>
       {contentsDesktop.map((content) => {        
-        return <FeaturedCard content={content}/>
+        return <FeaturedCard content={content} key={content.id}/>
         })
       }
 
@@ -27,7 +27,7 @@ const FeaturedCategories = () => {
     <div className='featuredMobile'>
     <h2>Scout Vendor  Unique Features</h2>
       {contentsMobile.map((content) => {        
-        return <FeaturedCard content={content}/>
+        return <FeaturedCard content={content} key={content.id}/>
         })
       }
     </div>

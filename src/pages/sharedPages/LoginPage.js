@@ -14,9 +14,11 @@ const initialState = {
   email: '',
   password: '',
 }
+
+
 const LoginPage = () => {
   const [values, setValues] = useState(initialState)
-  const {user, isLoading} = useSelector(store => store.user)
+  const {user, isLoading, tokens} = useSelector(store => store.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -219,7 +221,6 @@ const LogInWrapper = styled.div`
         display: flex;
         flex-direction: column;
         margin: 48px 0 0;
-
   
         input {
           margin: 5px 0 30px 0;

@@ -1,5 +1,13 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { addUserToLocalStorage, getUserFromLocalStorage } from "../../utils/localStorage";
+import { 
+    addUserToLocalStorage, 
+    getUserFromLocalStorage, 
+    removeUserFromLocalStorage,
+    addTokensToLocalStorage, 
+    getTokensFromLocalStorage, 
+    removeTokensFromLocalStorage  
+
+} from "../../utils/localStorage";
 import { clearStoreThunk, loginUserThunk, registerUserThunk } from './userThunk'
 import { toast } from 'react-toastify'
 
@@ -7,6 +15,7 @@ import { toast } from 'react-toastify'
 const initialState = {
     isLoading: false,
     user: getUserFromLocalStorage(),
+    tokens: getTokensFromLocalStorage()
 }
 
 export const registerUser = createAsyncThunk(
@@ -20,7 +29,6 @@ export const registerUser = createAsyncThunk(
 export const loginUser = createAsyncThunk(
     "user/loginUser",
     async (user, thunkAPI) => {
-        console.log(`Login User : ${JSON.stringify(user)}`)
         return loginUserThunk('api/auth/login', user, thunkAPI)
     }
 )
@@ -31,6 +39,12 @@ const userSlice = createSlice({
     name: "user",
     initialState,
     reducers: {
+        logoutUser: (state) => {
+            state.user = null;
+            removeUserFromLocalStorage();
+            removeTokensFromLocalStorage();
+            toast.success(`Goodbye!`)
+        },
         toggleSidebar: (state) => {
             state.isSidebarOpen = !state.isSidebarOpen
         }
@@ -59,10 +73,12 @@ const userSlice = createSlice({
         },
         [loginUser.fulfilled]: (state, { payload }) => {
             state.isloading = false;
-            const { user } = payload;
-            state.user = user;
-            addUserToLocalStorage(user);
-            toast.sucess(`Welcome Back`)
+            const { tokens } = payload
+            state.user = tokens;
+            console.log(tokens);
+            addTokensToLocalStorage(tokens)
+            addUserToLocalStorage(tokens);
+            toast.success(`Welcome Back`)
         },
         [loginUser.rejected]: (state, { payload }) => {
             state.isLoading = false;
@@ -71,5 +87,5 @@ const userSlice = createSlice({
     }
 })
 
-export const { toggleSidebar } = userSlice.actions;
+export const { toggleSidebar, logoutUser } = userSlice.actions;
 export default userSlice.reducer;

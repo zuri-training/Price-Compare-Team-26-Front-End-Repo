@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { clearStore } from '../features/user/userSlice'
-import { getUserFromLocalStorage } from './localStorage'
+// import { getTokensFromLocalStorage } from './localStorage'
 
 
 const customFetch = axios.create({
@@ -10,9 +10,9 @@ const customFetch = axios.create({
 
 customFetch.interceptors.request.use(
     (config) => {
-        // const user = getUserFromLocalStorage()
+        // const tokens = getTokensFromLocalStorage()
         // if(user) {
-        //     config.headers.common['Authorization'] = `Bearer ${user.token}`
+        //     config.headers.common['Authorization'] = `Bearer ${token.access}`
         // }
         return config
     }
@@ -31,7 +31,7 @@ export const checkForUnauthorizedResponse = (error, thunkAPI) => {
         thunkAPI.dispatch(clearStore())
         return thunkAPI.rejectWithValue('Unauthorized! Logging Out...')
     }
-    return thunkAPI.rejectWithValue(error.response.data.msg)
+    return thunkAPI.rejectWithValue(error.response.data)
 }
 
 export default customFetch

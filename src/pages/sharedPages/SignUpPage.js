@@ -304,9 +304,7 @@ const SignUpWrapper = styled.div`
           margin-left: 47px;
         }
       }
-    }
-
-    
+    }   
     
   }
 `
