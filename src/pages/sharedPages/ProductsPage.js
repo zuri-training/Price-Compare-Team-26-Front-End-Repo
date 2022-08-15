@@ -55,12 +55,17 @@ const ProductsPage = () => {
 }
 
 const ProductsPageWrapper = styled.div`
-  margin-top: 40px;
+  margin: 40px 0 20px;
   padding: 0 72px;
 
   .products-container {
     display: grid;
     gap: 2rem 1.5rem;
+    margin-top: 20px;
+  }
+
+  @media screen and (max-width: 428px) {
+    padding: 0;
     margin-top: 20px;
   }
 
