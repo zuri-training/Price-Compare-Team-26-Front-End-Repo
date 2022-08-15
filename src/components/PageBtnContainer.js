@@ -73,7 +73,7 @@ const PageBtnWrapper = styled.section`
     flex-wrap: wrap;
     gap: 1rem;
     height: 6rem;
-    margin-top: 2rem;
+    margin: 2rem 0;
     
     .btn_container {
         background: var(--clr-secondaryOrange);

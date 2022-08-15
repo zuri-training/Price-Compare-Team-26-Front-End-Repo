@@ -40,7 +40,7 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         logoutUser: (state) => {
-            toast.success(`Goodbye! ${state.user.first_name}`)
+            toast.success(`Goodbye ${state.user.first_name}!`)
             state.user = null;
             removeUserFromLocalStorage();
             removeTokensFromLocalStorage();
@@ -55,11 +55,13 @@ const userSlice = createSlice({
         },
         [registerUser.fulfilled]: (state, { payload }) => {
             state.isloading = false;
-            const { user } = payload;
-            state.user = user;
-            // console.log(payload)
-            addUserToLocalStorage(user);
-            toast.success(`Hello There`)
+            console.log(payload)
+            const { data } = payload;
+            state.user = data;
+            addUserToLocalStorage(data);
+            toast.success(`Welcome to Scout Vendor ${data.first_name}`)
+            toast.success(`Email verification sent!`)
+
         },
         [registerUser.rejected]: (state, { payload }) => {
             state.isLoading = false;

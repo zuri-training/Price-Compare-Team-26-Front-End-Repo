@@ -19,7 +19,7 @@ const ProductsPage = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch(getAllProducts())
-    }, 4000)
+    }, 3000)
   }, [page, search])
 
   if (isLoading) {
@@ -37,11 +37,11 @@ const ProductsPage = () => {
   return (
     <>
       <SearchBar/>
-      <ProductsPageWrapper>
-        <h4>
+      <ProductsPageWrapper className=''>
+        <h4 className='section-center'>
           {totalProducts} Product{products.length > 1 && 's'} available{' '}
         </h4>
-        <div>
+        <div className='section-center products-container'>
           {products.map((product) => {
             const { id, category, name, brand} = product
             return <ProductCard category={category} name={name} brand={brand} key={id}/>
@@ -57,6 +57,23 @@ const ProductsPage = () => {
 const ProductsPageWrapper = styled.div`
   margin-top: 40px;
   padding: 0 72px;
+
+  .products-container {
+    display: grid;
+    gap: 2rem 1.5rem;
+    margin-top: 20px;
+  }
+
+  @media (min-width: 992px) {
+    .products-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1170px) {
+    .products-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
 `
 
 export default ProductsPage
