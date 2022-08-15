@@ -42,9 +42,19 @@ const ProductsPage = () => {
           {totalProducts} Product{products.length > 1 && 's'} available{' '}
         </h4>
         <div className='section-center products-container'>
-          {products.map((product) => {
-            const { id, category, name, brand} = product
-            return <ProductCard category={category} name={name} brand={brand} key={id}/>
+          {products.map((singleProduct) => {
+            const {id, category, product, brand, price, image_url, store, product_url, available} = singleProduct
+            return <ProductCard
+              key={id}
+              brand={brand}
+              price={price}
+              image_url={image_url}
+              product_url={product_url}
+              available={available}
+              product={product}
+              store={store}
+              category={category}              
+              />
           })
           }
         </div>
