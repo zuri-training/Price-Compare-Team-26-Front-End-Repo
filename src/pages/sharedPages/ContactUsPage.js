@@ -5,7 +5,7 @@ import { useForm, ValidationError } from '@formspree/react';
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdojokvr");
   if (state.succeeded) {
-      return <p>Thanks for joining!</p>;
+      return <p>Thanks for Contacting Us!</p>;
   }
   return (
       <form onSubmit={handleSubmit}>
@@ -88,6 +88,7 @@ function ContactForm() {
             Message
           </label>
           <textarea
+            type='text'
             id="message"
             name="message"
             placeholder='Write your message'
@@ -174,13 +175,10 @@ const ContactContainer = styled.div`
         background: var(--clr-background);
         font-family: var(--bodyFont);
 
-        &::placeholder {
-          padding-left: 12px;
-        }
+      }
 
-        &:focus {
-          padding-left: 12px;
-        }
+      input[type=text], input[type=email], textarea[type=text] {
+        padding: 12px 20px;
       }
 
       input {
@@ -196,15 +194,6 @@ const ContactContainer = styled.div`
         textarea {
           height: 68px;
           margin-top: 5px;
-
-          &:focus, &::placeholder {
-            padding-top: 12px;
-            padding-left: 8px;
-          }
-
-          &:focus::placeholder {
-            padding-top: 6px;
-          }
         }
       }
 
@@ -258,14 +247,8 @@ const ContactContainer = styled.div`
           }
         }
 
-        input, textarea {
-          &::placeholder {
-            padding-left: 6px;
-          }
-
-          &:focus {
-            padding-left: 6px;
-          }
+        input[type=text],input[type=emai], textarea[type=text] {
+          padding: 5px 10px;
         }
 
         input {
@@ -281,11 +264,6 @@ const ContactContainer = styled.div`
           textarea {
             height: 68px;
             margin-top: 5px;
-
-            &::placeholder {
-              padding-top: 12px;
-              padding-left: 12px;
-            }
           }
         }
 

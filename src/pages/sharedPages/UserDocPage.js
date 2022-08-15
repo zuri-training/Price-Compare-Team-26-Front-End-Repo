@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from 'styled-components'
 import compare_1 from "../../assets/svg/compare_1.svg"
 import compare_2 from "../../assets/svg/compare_2.svg"
@@ -9,9 +9,14 @@ import alerts_1 from "../../assets/svg/alerts_1.svg"
 import report_1 from "../../assets/svg/report_1.svg"
 import reset from "../../assets/svg/reset.svg"
 import newsletter from "../../assets/svg/newsletter.svg"
+import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa'
 
 
 const UserDocPage = () => {
+  const [activeClass, setActiveClass] = useState(false)
+
+  const changeThumbClr = () => setActiveClass(prevState => !prevState)
+
   return (
     <UserDocWrapper>
       {/* How to Compare Price */}
@@ -70,12 +75,16 @@ const UserDocPage = () => {
       </div>
 
       {/* Text and thumbs div */}
-      <div>
+      <div className='thumbs_text'>
         <p>Was this page helpful? Was it great or not helpful. For more ways to help you use ScoutVendor</p>
-        <div>
-          
-        </div>
+        <div className='thumbs'>
+            <FaThumbsUp className={activeClass ? 'like active' : 'like' }
+              onClick={() => changeThumbClr()}
+            />
 
+            <FaThumbsDown className={activeClass ? 'dislike active' : 'dislike' }
+              onClick={() => changeThumbClr()}/>
+        </div>
       </div>
 
 
@@ -88,7 +97,37 @@ const UserDocWrapper = styled.div`
   padding: 50px 64px;
 
   div {
-    margin-bottom: 40px;
+    margin-bottom: 10px;
   }
+    .thumbs_text {
+      text-align: center;
+      .thumbs {
+        display: inline-block;
+        width: 100%;
+        margin-top: 40px;
+        padding-top: 40px;
+        text-align: center;
+        
+        .like, .dislike {
+          display: inline-block;
+          cursor: pointer;
+          font-size: var(--headlineLarge);
+          margin: 10px;
+        }
+    
+        .like:hover, .dislike:hover {
+          color: var(--clr-primaryOrange5);
+          transition: var(--transiton);
+          transform: scale(1.1)
+        }
+
+        .active {
+          color: var(--clr-primaryOrange5);
+        }
+      }
+    }
+
+    
+  
 `
 export default UserDocPage

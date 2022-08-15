@@ -18,7 +18,7 @@ const initialState = {
 
 const LoginPage = () => {
   const [values, setValues] = useState(initialState)
-  const {user, isLoading, tokens} = useSelector(store => store.user)
+  const { user, isLoading } = useSelector(store => store.user)
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
@@ -151,11 +151,9 @@ const LogInWrapper = styled.div`
         margin: 5px 0 30px 0;
         height: 52px;
         padding-left: 12px;
-
-        &::placeholder {
-          padding-left: 8px;
-        }
-
+      }
+      input[type=email], input[type=password] {
+        padding: 12px 20px;
       }
 
       .google_btn {
@@ -225,14 +223,9 @@ const LogInWrapper = styled.div`
         input {
           margin: 5px 0 30px 0;
           height: 52px;
-  
-          &::placeholder {
-            padding-left: 12px;
-          }
-  
-          &:focus {
-            padding-left: 12px;
-          }
+        }
+        input[type=email], input[type=password] {
+          padding: 6px 10px;
         }
 
         .signup_btn {

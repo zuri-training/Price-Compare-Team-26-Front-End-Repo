@@ -171,22 +171,6 @@ const SignUpWrapper = styled.div`
       flex-direction: column;
       margin: 48px 0 32px;
 
-      .form_field {
-        border: 1.2px solid var(--clr-grey4);
-        border-radius: var(--borderRadius);
-        background: var(--clr-background);
-        font-family: var(--bodyFont);
-        margin: 5px 0 30px 0;
-        height: 52px;
-
-        &::placeholder {
-          padding-left: 8px;
-        }
-
-        &:focus {
-          padding-left: 12px;
-        }
-      }
 
       input {
         border: 1.2px solid var(--clr-grey4);
@@ -196,10 +180,9 @@ const SignUpWrapper = styled.div`
         margin: 5px 0 30px 0;
         height: 52px;
         padding-left: 12px;
-
-        &::placeholder {
-          padding-left: 8px;
-        }
+      }
+      input[type=text], input[type=email], input[type=password] {
+        padding: 12px 20px;
       }
     }
 
@@ -270,19 +253,13 @@ const SignUpWrapper = styled.div`
         display: flex;
         flex-direction: column;
         margin: 48px 0 0;
-
   
         input {
           margin: 5px 0 30px 0;
           height: 52px;
-  
-          &::placeholder {
-            padding-left: 12px;
-          }
-  
-          &:focus {
-            padding-left: 12px;
-          }
+        }
+        input[type=text], input[type=email], input[type=password] {
+          padding: 6px 10px;
         }
 
         .signup_btn {
