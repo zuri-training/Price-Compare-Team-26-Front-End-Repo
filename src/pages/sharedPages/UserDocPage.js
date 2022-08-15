@@ -1,14 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import compare_1 from "../../assets/svg/compare_1"
-import compare_2 from "../../assets/svg/compare_2"
-import compare_3 from "../../assets/svg/compare_3"
-import product_1 from "../../assets/svg/product_1"
-import product_4 from "../../assets/svg/product_4"
-import alerts_1 from "../../assets/svg/alerts_1"
-import report_1 from "../../assets/svg/report_1"
-import reset from "../../assets/svg/reset"
-import newsletter from "../../assets/svg/newsletter"
+import compare_1 from "../../assets/svg/compare_1.svg"
+import compare_2 from "../../assets/svg/compare_2.svg"
+import compare_3 from "../../assets/svg/compare_3.svg"
+import product_1 from "../../assets/svg/product_1.svg"
+import product_4 from "../../assets/svg/product_4.svg"
+import alerts_1 from "../../assets/svg/alerts_1.svg"
+import report_1 from "../../assets/svg/report_1.svg"
+import reset from "../../assets/svg/reset.svg"
+import newsletter from "../../assets/svg/newsletter.svg"
 
 
 const UserDocPage = () => {

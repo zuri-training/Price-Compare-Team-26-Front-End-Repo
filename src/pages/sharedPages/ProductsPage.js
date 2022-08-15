@@ -19,7 +19,7 @@ const ProductsPage = () => {
   useEffect(() => {
     setTimeout(() => {
       dispatch(getAllProducts())
-    }, 3000)
+    }, 2000)
   }, [page, search])
 
   if (isLoading) {

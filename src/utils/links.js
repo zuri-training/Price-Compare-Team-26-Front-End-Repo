@@ -6,7 +6,7 @@ const links = [
     },
     {
         id: 2,
-        text: 'About SV',
+        text: 'About Us',
         path: 'about-us',
 
     }, 
