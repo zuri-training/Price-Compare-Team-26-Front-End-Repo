@@ -18,7 +18,7 @@ import ProductDetails from "./ProductDetailsPage";
 import ComingSoon from "./ComingSoonPage";
 import ContactUs from "./ContactUsPage";
 import Products from "./ProductsPage";
-
+import ProtectedRoute from "./ProtectedRoute";
 
 export {
     About,
@@ -30,7 +30,7 @@ export {
     Trending,
     Profile,
     Products,
-    ProductDetails,
+    ProtectedRoute,
     Login,
     Logout,
     Rules,
