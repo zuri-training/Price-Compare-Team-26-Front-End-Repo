@@ -45,7 +45,6 @@ const allProductsSlice = createSlice({
         },
         [getAllProducts.fulfilled]: (state, {payload} ) => {
             state.isLoading = false;
-            console.log(payload)
             const { total_count, total_pages, results } = payload
             state.products = results;
             state.totalProducts = total_count;
