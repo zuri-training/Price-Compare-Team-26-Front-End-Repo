@@ -14,6 +14,7 @@ import { toast } from 'react-toastify'
 
 const initialState = {
     isLoading: false,
+    isSidebarOpen: false,
     user: getUserFromLocalStorage(),
     tokens: getTokensFromLocalStorage()
 }

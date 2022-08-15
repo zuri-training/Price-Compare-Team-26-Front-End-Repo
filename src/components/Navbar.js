@@ -3,30 +3,31 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import SVLogo from '../assets/svg/SVLogoBlackOrange.svg'
 import { MdMenu } from 'react-icons/md';
-import { useProductsContext } from '../context/products_context';
 import { useSelector, useDispatch } from 'react-redux';
-import { clearStore } from '../features/user/userSlice';
+import { clearStore, toggleSidebar } from '../features/user/userSlice';
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.user)
   const dispatch = useDispatch()
 
-
-  const { toggleSidebar } = useProductsContext()
+  const toggle = () => {
+    dispatch(toggleSidebar())
+  }
   
   return (
     <NavContainer className='container'>
       <div className='menu_logo'>
-        <MdMenu onClick={toggleSidebar} className='mobile_menu'/>  
+        <MdMenu onClick={toggle}
+          className='mobile_menu'/>  
         <Link to='/'>
           <img src={SVLogo} alt='scout vendor'/>
         </Link>
       </div>
       <div className='nav_text mobile'>
         <Link to='/'>Home</Link>
-        <Link to='/about-us'>About SV</Link>
-        <Link to='/'>FAQ</Link>
-        <Link to='/contact-us'>Contact</Link>
+        <Link to='about-us'>About SV</Link>
+        <Link to='user-doc'>User Documentation</Link>
+        <Link to='contact-us'>Contact Us</Link>
       </div>
       <div className='nav_btn'>
         { user ? 
@@ -50,7 +51,7 @@ const NavContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 22px 64px;
+  padding: 22px 44px;
   border-bottom: 1px solid var(--clr-grey5);
 
   .mobile_menu {
@@ -61,12 +62,12 @@ const NavContainer = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 100px;
+    margin: 0 80px;
 
     a {
       color: var(--clr-primaryOrange4);
-      margin-right: 36px;
-      font-size: var(--titleSmall);
+      margin-right: 30px;
+      font-size: var(--bodyMedium);
       font-weight: 600;
     }
   }

@@ -19,7 +19,6 @@ const Footer = () => {
             <li onClick={scrollToTop}><Link to='about-us'>About Scout Vendor</Link></li>
             <li onClick={scrollToTop}><Link to='compare-price'>Comparing Prices</Link></li>
             <li onClick={scrollToTop}><Link to='/'>Contact Us</Link></li>
-            <li><Link to='/'>FAQ</Link></li>
           </ul>
         </div>
         <div className='info'>
@@ -28,6 +27,11 @@ const Footer = () => {
             <li onClick={scrollToTop}><Link to='rules-guidelines'>Rules and Guidelines</Link></li>
             <li onClick={scrollToTop}><Link to='privacy-policy'>Privacy Policy</Link></li>
             <li onClick={scrollToTop}><Link to='cookie-policy'>Cookie Policy</Link></li>
+            <li onClick={scrollToTop}><Link to='user-doc'>User Documentation</Link></li>
+            <li><a href='https://github.com/zuri-training/Team_26_Repo-Proj_Price_Compare/blob/master/api_docs.md'
+            target='_blank'
+            >API Documentation</a></li>
+
           </ul>
         </div>
         <div className='catalogue'>

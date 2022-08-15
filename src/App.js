@@ -13,7 +13,7 @@ import {
   Login, ContactUs,
   Logout, ProtectedRoute, Products,
   SharedLayout, SignUp, ComingSoon,
-  Categories, ComparePrice, CookiePolicy,  Error, Privacy, Rules
+  Categories, ComparePrice, CookiePolicy,  Error, Privacy, Rules, UserDoc
 } from './pages/sharedPages'
 
 
@@ -43,7 +43,7 @@ function App() {
             <Products/>
           </ProtectedRoute>}/>
 
-
+          <Route path='user-doc' element={<UserDoc/>} />       
           <Route path='sign-up' element={<SignUp/>} />       
           <Route path='*' element={<Error />} />
         </Route> 
