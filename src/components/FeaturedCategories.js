@@ -18,8 +18,8 @@ const FeaturedCategories = () => {
     <div className='featured_text_btn'>
       <h2>We aim to help you get the best prices for what its worth with ease.</h2>
       <div className='btnn'>
-        <Link to='/'><button className='btn btn_compare'>Compare</button></Link>
-        <Link to='/'><button className='btn btn_active'>How to Compare</button></Link>
+        <Link to='product-categories'><button className='btn btn_compare'>Compare</button></Link>
+        <Link to='compare-price'><button className='btn btn_active'>How to Compare</button></Link>
       </div>
     </div>
     </div>
