@@ -5,7 +5,7 @@ import SVLogo from '../assets/svg/SVLogoBlackOrange.svg'
 import { MdMenu } from 'react-icons/md';
 import { useProductsContext } from '../context/products_context';
 import { useSelector, useDispatch } from 'react-redux';
-import { logoutUser } from '../features/user/userSlice';
+import { clearStore } from '../features/user/userSlice';
 
 const Navbar = () => {
   const { user } = useSelector((store) => store.user)
@@ -33,7 +33,7 @@ const Navbar = () => {
           <button 
           type='button' 
           className='btn btn_active'
-          onClick={() => dispatch(logoutUser())}
+          onClick={() => dispatch(clearStore('Logging Out...'))}
           >Logout</button>
         :
           <>

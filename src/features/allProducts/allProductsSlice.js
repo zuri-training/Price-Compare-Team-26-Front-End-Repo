@@ -37,7 +37,7 @@ const allProductsSlice = createSlice({
         clearFilters: (state) => {
             return { ...state, ...initialFiltersState }
         },
-        clearAllProducts: (state) => initialState
+        clearAllProductsState: (state) => initialState
     },
     extraReducers: {
         [getAllProducts.pending]: (state) => {
@@ -64,7 +64,7 @@ export const {
     hideLoading,
     handleChange,
     changePage,
-    clearAllProducts,
+    clearAllProductsState,
     clearFilters
 } = allProductsSlice.actions
 
