@@ -12,10 +12,6 @@ import Loading from './Loading'
 import ProductImages from './ProductImages'
 import PageHero from './PageHero'
 import Stars from './Stars'
-import ProductList from './ProductList'
-import Sort from './Sort'
-import GridView from './GridView'
-import ListView from './ListView'
 import Filters from './Filters'
 import PageBtnContainer from './PageBtnContainer'
 import ProductCard from './ProductCard'
@@ -36,12 +32,8 @@ export {
     SmallSidebar,
     ProductImages,
     PageHero,
-    ProductList,
     ProductCard,
     PageBtnContainer,
     Stars,
-    Sort,
-    GridView,
-    ListView,
     SearchBar
 }

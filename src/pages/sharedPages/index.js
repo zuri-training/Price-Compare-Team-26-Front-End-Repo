@@ -15,7 +15,6 @@ import SharedLayout from "./SharedLayout";
 import SignUp from "./SignUpPage";
 import Trending from "./TrendingPage";
 import ProductDetails from "./ProductDetailsPage";
-import ProductLists from "./ProductListingPage";
 import ComingSoon from "./ComingSoonPage";
 import ContactUs from "./ContactUsPage";
 import Products from "./ProductsPage";
@@ -32,7 +31,6 @@ export {
     Profile,
     Products,
     ProductDetails,
-    ProductLists,
     Login,
     Logout,
     Rules,

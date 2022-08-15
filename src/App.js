@@ -11,7 +11,7 @@ import {
   Trending,
   Profile,
   Login, ContactUs,
-  Logout, ProductLists, ProductDetails, Products,
+  Logout, ProductDetails, Products,
   SharedLayout, SignUp, ComingSoon,
   Categories, ComparePrice, CookiePolicy,  Error, Privacy, Rules
 } from './pages/sharedPages'
@@ -38,7 +38,6 @@ function App() {
           <Route path='contact-us' element={ <ContactUs/>} />
           <Route path='coming-soon' element={ <ComingSoon/>} />
           <Route path='product-categories' element={<Categories/>} />
-          <Route path='product-lists' element={<ProductLists/>} />
           <Route path='products' element={<Products/>} />
           <Route path='product-details/:id' element={<ProductDetails/>} />
 
