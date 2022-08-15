@@ -7,30 +7,21 @@ const links = [
     {
         id: 2,
         text: 'About SV',
-        // path: 'profile',
-        path: '/',
+        path: 'about-us',
 
     }, 
     {
         id: 3,
         text: 'Contact Us',
-        // path: 'trending',
-        path: '/',
+        path: 'contact-us',
 
     }, 
     {
         id: 4,
-        text: 'FAQ',
-        // path: 'discount-deals',
-        path: '/',
+        text: 'User Documentation',
+        path: 'user-doc',
 
     },
-    // {
-    //     id: 5,
-    //     text: 'Login & Security',
-    //     // path: 'login-security',
-    //     path: 'coming-soon',
-    // },
 ]
 
 export default links
