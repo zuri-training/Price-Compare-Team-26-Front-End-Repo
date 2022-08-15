@@ -1,9 +1,24 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { MdSearch } from "react-icons/md";
+import { useDispatch, useSelector } from "react-redux";
+import { handleChange } from "../features/allProducts/allProductsSlice";
+
 // import { GithubContext } from "../context/context";
 const SearchBar = () => {
-  const [productName, setProductName] = useState("");
+  // const [productName, setProductName] = useState("");
+
+  const { 
+    isLoading,
+    search
+  } = useSelector((store) => store.allProducts)
+
+  const dispatch = useDispatch()
+  const handleSearch = (e) => {
+    if(isLoading) return
+
+    dispatch(handleChange({ name: e.target.name, value: e.target.value}))
+  }
 
 //   const { requests, error, searchGithubUser, isLoading } = React.useContext(GithubContext)
 
@@ -22,9 +37,11 @@ const SearchBar = () => {
         <form onSubmit={handleSubmit}>
           <div className="search_field">
             <input type="text" placeholder="What product are you shopping for?"
-            value={productName}
-            onChange={(e) => setProductName(e.target.value)} />
-            <button type="submit" className="search_btn"><MdSearch/></button>
+            name='search'
+            value={search}
+            onChange={handleSearch} />
+            <button type="submit" 
+              className="search_btn"><MdSearch/></button>
           </div>
         </form>
       </Wrapper>

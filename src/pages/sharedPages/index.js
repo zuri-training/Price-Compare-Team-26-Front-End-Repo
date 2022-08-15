@@ -14,10 +14,11 @@ import Rules from "./RulesPage";
 import SharedLayout from "./SharedLayout";
 import SignUp from "./SignUpPage";
 import Trending from "./TrendingPage";
-import ProductDetails from "./ProductDetailsPage";
-import ProductLists from "./ProductListingPage";
 import ComingSoon from "./ComingSoonPage";
 import ContactUs from "./ContactUsPage";
+import Products from "./ProductsPage";
+import ProtectedRoute from "./ProtectedRoute";
+import UserDoc from "./UserDocPage";
 
 export {
     About,
@@ -28,8 +29,8 @@ export {
     Error,
     Trending,
     Profile,
-    ProductDetails,
-    ProductLists,
+    Products,
+    ProtectedRoute,
     Login,
     Logout,
     Rules,
@@ -40,4 +41,5 @@ export {
     Privacy,
     CookiePolicy,
     ComingSoon,
+    UserDoc
 }

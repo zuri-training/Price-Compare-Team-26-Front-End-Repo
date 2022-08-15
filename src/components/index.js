@@ -4,7 +4,6 @@ import Navbar from './Navbar'
 import FeaturedCategories from './FeaturedCategories'
 import Hero from './HeroSection'
 import CategoryCard from './CategoryCard'
-import BigSidebar from './BigSidebar'
 import SmallSidebar from './SmallSidebar'
 import CategoryTile from './CategoryTile'
 import Error from './Error'
@@ -12,12 +11,10 @@ import Loading from './Loading'
 import ProductImages from './ProductImages'
 import PageHero from './PageHero'
 import Stars from './Stars'
-import ProductList from './ProductList'
-import Sort from './Sort'
-import GridView from './GridView'
-import ListView from './ListView'
 import Filters from './Filters'
-
+import PageBtnContainer from './PageBtnContainer'
+import ProductCard from './ProductCard'
+import SearchBar from './SearchBar'
 
 export {
     Contact,
@@ -29,14 +26,12 @@ export {
     Navbar,
     Hero,
     CategoryCard,
-    BigSidebar,
     Loading,
     SmallSidebar,
     ProductImages,
     PageHero,
-    ProductList,
+    ProductCard,
+    PageBtnContainer,
     Stars,
-    Sort,
-    GridView,
-    ListView
+    SearchBar
 }

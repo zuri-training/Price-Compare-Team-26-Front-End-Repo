@@ -1,21 +1,69 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa';
 import NavLinks from './NavLinks';
-import { useProductsContext } from '../context/products_context';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearStore, toggleSidebar } from '../features/user/userSlice';
 
 const SmallSidebar = () => {
-    const { isSidebarOpen, toggleSidebar } = useProductsContext()
+    const { user, isSidebarOpen } = useSelector((store) => store.user)
+    const dispatch = useDispatch()
+
+    const toggle = () => {
+        dispatch(toggleSidebar())
+    }
+
+    const handleLogout = () => {
+        dispatch(toggleSidebar())
+        dispatch(clearStore('Logging Out...'))
+    }
+
   return (
     <SidebarContainer>
         <div className={isSidebarOpen ? 'sidebar-container show-sidebar'
         : 'sidebar-container'   
     }>
         <div className="content">
-            <button className='close-btn' onClick={toggleSidebar}>
+            <button className='close-btn' onClick={toggle}>
                 <FaTimes/>
             </button>
-            <NavLinks toggleSidebar={toggleSidebar}/>
+            <NavLinks toggleSidebar={toggle}/>
+            {
+                user ?
+                <NavLink
+                    to='/'
+                    onClick={handleLogout}
+                    className={({ isActive }) =>{
+                        return isActive ? 'nav-link active' : 'nav-link'
+                    }}
+                >
+                    Logout
+                </NavLink>
+
+                :
+                <div className='nav_links'>
+                    <NavLink
+                        to='sign-up'
+                        onClick={toggle}
+                        className={({ isActive }) =>{
+                            return isActive ? 'nav-link active' : 'nav-link'
+                        }}
+                    >
+                        Sign Up                    
+                    </NavLink>
+                    <NavLink
+                        to='login'
+                        onClick={toggle}
+                        className={({ isActive }) =>{
+                            return isActive ? 'nav-link active' : 'nav-link'
+                        }}
+                    >
+                        Login
+                    </NavLink>
+                </div>
+
+            }
         </div>
 
         </div>

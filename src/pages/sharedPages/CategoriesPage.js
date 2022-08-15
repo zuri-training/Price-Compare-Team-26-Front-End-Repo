@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from '../../components/Card'
 import data from '../../data2.json'
-import SearchBar from '../../components/SearchBar'
+// import SearchBar from '../../components/SearchBar'
+
 const CategoriesPage = () => {
   return (
     <CategoryPageContainer className='container'>
-      <SearchBar/>
+      {/* <SearchBar/> */}
 
       <div className=''>
       <h2>Categories</h2>
