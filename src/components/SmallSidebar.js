@@ -1,10 +1,17 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { FaTimes } from 'react-icons/fa';
 import NavLinks from './NavLinks';
 import { useProductsContext } from '../context/products_context';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearStore } from '../features/user/userSlice';
+
 
 const SmallSidebar = () => {
+    const { user } = useSelector((store) => store.user)
+    const dispatch = useDispatch()
+
     const { isSidebarOpen, toggleSidebar } = useProductsContext()
   return (
     <SidebarContainer>
@@ -16,6 +23,44 @@ const SmallSidebar = () => {
                 <FaTimes/>
             </button>
             <NavLinks toggleSidebar={toggleSidebar}/>
+            {
+                user ?
+                <NavLink
+                    to='/'
+                    onClick={() => {
+                        return ( dispatch(clearStore('Logging Out...'))
+                        )
+                    }}
+                    className={({ isActive }) =>{
+                        return isActive ? 'nav-link active' : 'nav-link'
+                    }}
+                >
+                    Logout
+                </NavLink>
+
+                :
+                <div className='nav_links'>
+                    <NavLink
+                        to='sign-up'
+                        onClick={toggleSidebar}
+                        className={({ isActive }) =>{
+                            return isActive ? 'nav-link active' : 'nav-link'
+                        }}
+                    >
+                        Sign Up                    
+                    </NavLink>
+                    <NavLink
+                        to='login'
+                        onClick={toggleSidebar}
+                        className={({ isActive }) =>{
+                            return isActive ? 'nav-link active' : 'nav-link'
+                        }}
+                    >
+                        Login
+                    </NavLink>
+                </div>
+
+            }
         </div>
 
         </div>
