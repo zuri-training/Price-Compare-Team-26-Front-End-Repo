@@ -12,8 +12,6 @@ export default Loading
 
 export const LoadingCenter = ({center}) => {
   return (
-    <div className='section section-center'>
-        <div className={center ? 'loading loading_center' : 'loading'}></div>
-    </div>
+    <div className={center ? 'loading loading_center' : 'loading'}></div>
   )
 }

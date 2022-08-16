@@ -5,10 +5,15 @@ import { useForm, ValidationError } from '@formspree/react';
 function ContactForm() {
   const [state, handleSubmit] = useForm("mdojokvr");
   if (state.succeeded) {
-      return <p>Thanks for Contacting Us!</p>;
+      return <h3>Thanks for Contacting Us!</h3>;
   }
   return (
       <form onSubmit={handleSubmit}>
+        {
+          !state.succeeded ? 
+        <h3>Send us a Message</h3>
+          : null
+        }
         <div className='row'>
           <div className='mobile'>
             <label htmlFor="fname">
@@ -121,7 +126,6 @@ const ContactUsPage = () => {
       </div>
 
       <div className='contact_form'>
-        <h3>Send us a Message</h3>
           <ContactForm/>
       </div>
 

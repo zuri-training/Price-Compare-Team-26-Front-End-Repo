@@ -1,4 +1,3 @@
-import Contact from './Contact'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import FeaturedCategories from './FeaturedCategories'
@@ -17,7 +16,6 @@ import ProductCard from './ProductCard'
 import SearchBar from './SearchBar'
 
 export {
-    Contact,
     CategoryTile,
     Error,
     FeaturedCategories,

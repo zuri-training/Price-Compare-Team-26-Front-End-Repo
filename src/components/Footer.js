@@ -13,6 +13,11 @@ function ContactForm() {
   }
   return (
       <form onSubmit={handleSubmit}>
+        { !state.succeeded ?
+          <p>
+            Get updates on prices and shopping tips with Scout Vendor Newsletter
+          </p> : null
+          }
       <input
         id="email"
         type="email" 
@@ -77,9 +82,7 @@ const Footer = () => {
 
         <div className='newsletter'>
           <img src={Newsletter} alt="newsletter-logo" />
-          <p>
-            Get updates on prices and shopping tips with Scout Vendor Newsletter
-          </p>
+          
           <ContactForm/>
         </div>
       </div>

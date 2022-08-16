@@ -8,11 +8,9 @@ const SharedLayout = () => {
   return (
     <SharedContainer>
       <main className="">
-        <SmallSidebar />
-        <div>
-          <div className=''>
-            <Outlet/>
-          </div>
+        <SmallSidebar />        
+        <div className=''>
+          <Outlet/>
         </div>
       </main>
       
@@ -20,8 +18,8 @@ const SharedLayout = () => {
   )
 }
 
-const SharedContainer = styled.section`
-  
+const SharedContainer = styled.main`
+
 `
 
 export default SharedLayout

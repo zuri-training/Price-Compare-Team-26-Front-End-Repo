@@ -10,12 +10,16 @@ import report_1 from "../../assets/svg/report_1.svg"
 import reset from "../../assets/svg/reset.svg"
 import newsletter from "../../assets/svg/newsletter.svg"
 import { FaThumbsUp, FaThumbsDown } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 
 const UserDocPage = () => {
-  const [activeClass, setActiveClass] = useState(false)
+  const [activeClass, setActiveClass] = useState('')
 
-  const changeThumbClr = () => setActiveClass(prevState => !prevState)
+  const changeThumbClr = (e) => {
+    const thumbClicked = e.target.id
+    thumbClicked === 'like' ? setActiveClass({activeClass: ''}) : setActiveClass({activeClass: thumbClicked})
+  }
 
   return (
     <UserDocWrapper>
@@ -76,14 +80,16 @@ const UserDocPage = () => {
 
       {/* Text and thumbs div */}
       <div className='thumbs_text'>
-        <p>Was this page helpful? Was it great or not helpful. For more ways to help you use ScoutVendor</p>
+        <p>Was this page helpful? For more ways to help or want to leave a feedback, kindly contact us <Link to='../contact-us'>here.</Link> </p>
         <div className='thumbs'>
-            <FaThumbsUp className={activeClass ? 'like active' : 'like' }
-              onClick={() => changeThumbClr()}
+          
+            <FaThumbsUp  id='like'
+          className={`like ${activeClass === 'like' ? 'activeClass': ''}` }
+              onClick={(e) => changeThumbClr(e)}
             />
 
-            <FaThumbsDown className={activeClass ? 'dislike active' : 'dislike' }
-              onClick={() => changeThumbClr()}/>
+            <FaThumbsDown className={ `dislike ${activeClass === 'dislike' ? 'activeClass': ''}` } id='dislike'
+              onClick={(e) => changeThumbClr(e)}/>
         </div>
       </div>
 
@@ -101,24 +107,49 @@ const UserDocWrapper = styled.div`
   }
     .thumbs_text {
       text-align: center;
+
+      p {
+        a {
+          color: var(--clr-text-black);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--clr-primaryOrange5);
+            font-weight: 600;
+          }
+        }
+      }
       .thumbs {
         display: inline-block;
         width: 100%;
-        margin-top: 40px;
+        margin-top: 10px;
         padding-top: 40px;
         text-align: center;
+
+        .like {
+          margin-right: 100px;
+        }
+        
+        .like:hover {
+          transform: scale(1.1);
+        }
         
         .like, .dislike {
           display: inline-block;
           cursor: pointer;
           font-size: var(--headlineLarge);
-          margin: 10px;
+        }
+
+        .dislike {
+          transform: scale(-1, 1);
+        }
+        .dislike:hover {
+          transform: scale(-1.1, 1);
         }
     
         .like:hover, .dislike:hover {
           color: var(--clr-primaryOrange5);
           transition: var(--transiton);
-          transform: scale(1.1)
         }
 
         .active {
