@@ -14,6 +14,8 @@ import Filters from './Filters'
 import PageBtnContainer from './PageBtnContainer'
 import ProductCard from './ProductCard'
 import SearchBar from './SearchBar'
+import PageBtnCtn from './PageBtnCtn'
+
 
 export {
     CategoryTile,
@@ -30,6 +32,7 @@ export {
     PageHero,
     ProductCard,
     PageBtnContainer,
+    PageBtnCtn,
     Stars,
     SearchBar
 }

@@ -1,5 +1,7 @@
 import React from 'react'
+import { MdOutlineOpenInNew } from 'react-icons/md'
 import styled from 'styled-components'
+
 
 
 const ProductCard = ({ image_url, product, category, brand, store, price, available, product_url }) => {
@@ -17,6 +19,7 @@ const ProductCard = ({ image_url, product, category, brand, store, price, availa
           <a href={product_url} target="_blank" rel="noopener noreferrer">
           <button className='btn store_btn'>
               Visit Store
+              <MdOutlineOpenInNew/>              
           </button>
           </a>
         </section>
@@ -27,10 +30,12 @@ const ProductCard = ({ image_url, product, category, brand, store, price, availa
 }
 
 const ProductCardWrapper = styled.div`
+  align-self: flex-end;
 
   .product {
     display: grid;
     gap: 2rem;
+    align-content: flex-end;
 
     img {
       width: 232px;
@@ -57,6 +62,12 @@ const ProductCardWrapper = styled.div`
       }
 
       .store_btn {
+        display: flex;
+        font-size: var(--titleMedium);
+        svg {
+          margin-left: 10px;
+          font-size: var(--titleLarge);
+        }
 
       }
     }

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import styled from 'styled-components'
-import { PageBtnContainer, ProductCard, SearchBar } from '../../components'
+import { PageBtnContainer, PageBtnCtn, ProductCard, SearchBar } from '../../components'
 import { LoadingCenter } from '../../components/Loading'
 import { getAllProducts } from '../../features/allProducts/allProductsSlice'
 
@@ -61,7 +61,9 @@ const ProductsPage = () => {
           })
           }
         </div>
-        {numOfPages > 1 && <PageBtnContainer/>}
+        {/* {numOfPages > 1 && <PageBtnContainer/>} */}
+        {numOfPages > 1 && <PageBtnCtn/>}
+
       </ProductsPageWrapper>
     </>
   )
