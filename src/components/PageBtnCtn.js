@@ -8,11 +8,11 @@ const PageBtnCtn = () => {
     const { numOfPages, page } = useSelector((store) => store.allProducts)
     const dispatch  =  useDispatch()
 
-    const handlePageClick = (data) => {
-        let pageNumber = data.selected + 1
-        // console.log(data.selected)
-        dispatch(changePage(pageNumber))
-    }
+    // const handlePageClick = (data) => {
+    //     let pageNumber = data.selected + 1
+    //     // console.log(data.selected)
+    //     dispatch(changePage(pageNumber))
+    // }
 
     const handlePageChange = (e) => {
         let pageNumber = e.nextSelectedPage + 1
